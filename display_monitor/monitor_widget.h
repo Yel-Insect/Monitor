@@ -22,9 +22,17 @@ class MonitorWidget : public QWidget {
     //   thread_->join();
     // }
   }
+  QWidget* ShowAllMonitorWidget();
+  QWidget* InitCpuMonitorWidget();
+  QWidget* InitSoftIrqMonitorWidget();
+  QWidget* InitButtonMenu();
+  // QWidget* InitMemMonitorWidget();
 
-  QWidget* InitMonitorWidget();
   void UpdateData(const monitor::proto::MonitorInfo& monitor_info);
+
+ private slots:
+  void ClickCpuButton();
+  void ClickSoftIrqButton();
 
  private:
   QTableView* monitor_view_ = nullptr;
@@ -34,6 +42,9 @@ class MonitorWidget : public QWidget {
   MonitorBaseModel* monitor_model_ = nullptr;
   CpuLoadModel* cpu_load_model_ = nullptr;
   CpuStatModel* cpu_stat_model_ = nullptr;
+
+  QStackedLayout* stack_menu_ = nullptr;
+
   // std::unique_ptr<std::thread> thread_;
   // bool stop = false;
 };

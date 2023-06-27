@@ -52,13 +52,33 @@ void CpuStatMonitor::RunOnce(monitor::proto::MonitorInfo* monitor_info) {
         float cpu_system_percent = (cpu_stat.system - old.system) /
                                    (new_cpu_total_time - old_cpu_total_time) *
                                    100.00;
-        // float cpu_system_percent = (cpu_stat.system - old.system) /
-        //                            (new_cpu_total_time - old_cpu_total_time)
-        //                            * 100.00;
+        float cpu_nice_percent = (cpu_stat.nice - old.nice) /
+                                 (new_cpu_total_time - old_cpu_total_time) *
+                                 100.00;
+        float cpu_idle_percent = (cpu_stat.idle - old.idle) /
+                                 (new_cpu_total_time - old_cpu_total_time) *
+                                 100.00;
+        // float cpu_io_wait_percent = (cpu_stat.io_wait - old.io_wait) /
+        //                             (new_cpu_total_time - old_cpu_total_time) *
+        //                             100.00;
+        float cpu_io_wait_percent = (cpu_stat.io_wait - old.io_wait) /
+                                    (new_cpu_total_time - old_cpu_total_time) *
+                                    100.00;
+        float cpu_irq_percent = (cpu_stat.irq - old.irq) /
+                                (new_cpu_total_time - old_cpu_total_time) *
+                                100.00;
+        float cpu_soft_irq_percent = (cpu_stat.soft_irq - old.soft_irq) /
+                                     (new_cpu_total_time - old_cpu_total_time) *
+                                     100.00;
         cpu_stat_msg->set_cpu_name(cpu_stat.cpu_name);
         cpu_stat_msg->set_cpu_percent(cpu_percent);
         cpu_stat_msg->set_usr_percent(cpu_user_percent);
         cpu_stat_msg->set_system_percent(cpu_system_percent);
+        cpu_stat_msg->set_nice_percent(cpu_nice_percent);
+        cpu_stat_msg->set_idle_percent(cpu_idle_percent);
+        cpu_stat_msg->set_io_wait_percent(cpu_io_wait_percent);
+        cpu_stat_msg->set_irq_percent(cpu_irq_percent);
+        cpu_stat_msg->set_soft_irq_percent(cpu_soft_irq_percent);
       }
       cpu_stat_map_[cpu_stat.cpu_name] = cpu_stat;
     }

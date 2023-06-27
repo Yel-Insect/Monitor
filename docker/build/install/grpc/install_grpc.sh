@@ -6,6 +6,7 @@ cd "$(dirname "${BASH_SOURCE[0]}")"
 
 THREAD_NUM=$(nproc)
 
+# https://github.com/grpc/grpc/archive/refs/tags/v1.30.0.tar.gz
 # Install grpc.
 VERSION="1.30.0"
 PKG_NAME="grpc-${VERSION}.tar.gz"

@@ -6,7 +6,8 @@ cd "$(dirname "${BASH_SOURCE[0]}")"
 
 THREAD_NUM=$(nproc)
 
-# Install grpc.
+# https://github.com/Kitware/CMake/archive/refs/tags/v3.26.4.tar.gz
+# Install cmake.
 VERSION="3.26.4"
 PKG_NAME="CMake-${VERSION}.tar.gz"
 

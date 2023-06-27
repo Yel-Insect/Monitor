@@ -5,13 +5,8 @@ set -e
 BUILD_TYPE="${1:-download}"
 
 CURR_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd -P)"
-# . ${CURR_DIR}/installer_base.sh
 
 TARGET_ARCH="$(uname -m)"
-
-# Note(storypku)
-# 1) libicu6X: required by uic
-# 2) libxkbcommonX required by `ldd /usr/local/qt5/plugins/platforms/libqxcb.so`
 
 QT_VERSION_A=5.12
 QT_VERSION_B=5.12.9
@@ -20,8 +15,6 @@ QT_VERSION_Z=$(echo "$QT_VERSION_B" | tr -d '.')
 # docker/build/install/qt/qt-opensource-linux-x64-5.12.9.run
 QT_INSTALLER=qt-opensource-linux-x64-5.12.9.run
 # https://download.qt.io/archive/qt/5.12/5.12.9/qt-opensource-linux-x64-5.12.9.run
-
-# pip3 install cuteci
 
 MY_DEST_DIR="/usr/local/Qt${QT_VERSION_B}"
 cuteci --installer /tmp/install/qt/qt-opensource-linux-x64-5.12.9.run \
@@ -42,8 +35,6 @@ export QT5_PATH=\"${QT5_PATH}\"
 export QT_QPA_PLATFORM_PLUGIN_PATH=\"\${QT5_PATH}/plugins\"
 add_to_path \"\${QT5_PATH}/bin\"
 """
-
-# echo "${__mytext}" | tee -a "${APOLLO_PROFILE}"
 
 # clean up
 rm -f ${QT_INSTALLER}

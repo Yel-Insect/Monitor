@@ -9,8 +9,11 @@ int main(int argc, char* argv[]) {
   QApplication app(argc, argv);
   monitor::MonitorWidget moitor_widget;
   monitor::RpcClient rpc_client;
-  QWidget* widget = moitor_widget.InitMonitorWidget();
   monitor::proto::MonitorInfo monitor_info;
+
+  QWidget* widget = moitor_widget.ShowAllMonitorWidget();
+  widget->show();
+
   std::unique_ptr<std::thread> thread_;
   thread_ = std::make_unique<std::thread>([&]() {
     while (true) {

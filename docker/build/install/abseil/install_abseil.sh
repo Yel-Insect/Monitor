@@ -4,6 +4,7 @@ set -e
 
 cd "$(dirname "${BASH_SOURCE[0]}")"
 
+# https://github.com/abseil/abseil-cpp/archive/refs/tags/20200225.2.tar.gz
 # Install abseil.
 THREAD_NUM=$(nproc)
 VERSION="20200225.2"

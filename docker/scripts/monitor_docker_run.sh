@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+MONITOR_HOME_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )/../.." && pwd )"
+
 display=""
 if [ -z ${DISPLAY} ];then
     display=":1"
@@ -14,7 +16,13 @@ group="$(id -g -n)"
 gid="$(id -g)"
 
 
-docker run -it \
+echo "stop and rm docker" 
+docker stop linux_monitor > /dev/null
+docker rm -v -f linux_monitor > /dev/null
+
+echo "start docker"
+docker run -it -d \
+--name linux_monitor \
 -e DISPLAY=$display \
 -e DOCKER_USER="${user}" \
 -e USER="${user}" \
@@ -22,9 +30,7 @@ docker run -it \
 -e DOCKER_GRP="${group}" \
 -e DOCKER_GRP_ID="${gid}" \
 -e XDG_RUNTIME_DIR=$XDG_RUNTIME_DIR \
--v /home/cargo/work/test_monitor:/work \
--v /home/cargo/Downloads/exmpl-cmake-grpc-master:/grpc \
+-v ${MONITOR_HOME_DIR}:/work \
 -v ${XDG_RUNTIME_DIR}:${XDG_RUNTIME_DIR} \
--v "/tmp/.X11-unix:/tmp/.X11-unix:rw" \
 --net host \
-test111:monitor
+linux:monitor

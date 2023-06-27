@@ -22,8 +22,11 @@ RUN apt-get update  && apt-get upgrade -y  && \
     qtchooser \
     qt5-qmake \
     qtbase5-dev-tools \
-    libboost-all-dev 
-    
+    libboost-all-dev \
+    net-tools \
+    vim \
+    stress 
+
 RUN apt-get install -y libc-ares-dev  libssl-dev gcc g++ make 
 RUN apt-get install -y  \
     libx11-xcb1 \
@@ -32,12 +35,12 @@ RUN apt-get install -y  \
     libfontconfig1 \
     libxkbcommon0   \
     libxkbcommon-x11-0
+
 RUN apt-get install -y python-dev \
     python3-dev \
     python-pip \
     python-all-dev 
 
-RUN pip install cuteci -i https://mirrors.aliyun.com/pypi/simple
 
 COPY install/protobuf /tmp/install/protobuf
 RUN /tmp/install/protobuf/install_protobuf.sh
@@ -56,6 +59,8 @@ RUN pip3 install cuteci -i https://mirrors.aliyun.com/pypi/simple
 
 COPY install/qt /tmp/install/qt
 RUN /tmp/install/qt/install_qt.sh
+
+
 
 
 
