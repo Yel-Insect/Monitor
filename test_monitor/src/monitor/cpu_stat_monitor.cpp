@@ -1,13 +1,11 @@
 #include "monitor/cpu_stat_monitor.h"
 
 #include "utils/read_file.h"
-#include "utils/time.h"
-
 #include "monitor_info.grpc.pb.h"
 #include "monitor_info.pb.h"
 
 namespace monitor {
-void CpuStatMonitor::RunOnce(monitor::proto::MonitorInfo* monitor_info) {
+void CpuStatMonitor::UpdateOnce(monitor::proto::MonitorInfo* monitor_info) {
   ReadFile cpu_stat_file(std::string("/proc/stat"));
   std::vector<std::string> cpu_stat_list;
   while (cpu_stat_file.ReadLine(&cpu_stat_list)) {
@@ -58,9 +56,6 @@ void CpuStatMonitor::RunOnce(monitor::proto::MonitorInfo* monitor_info) {
         float cpu_idle_percent = (cpu_stat.idle - old.idle) /
                                  (new_cpu_total_time - old_cpu_total_time) *
                                  100.00;
-        // float cpu_io_wait_percent = (cpu_stat.io_wait - old.io_wait) /
-        //                             (new_cpu_total_time - old_cpu_total_time) *
-        //                             100.00;
         float cpu_io_wait_percent = (cpu_stat.io_wait - old.io_wait) /
                                     (new_cpu_total_time - old_cpu_total_time) *
                                     100.00;

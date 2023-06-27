@@ -1,13 +1,12 @@
 #include "monitor/cpu_load_monitor.h"
 
 #include "utils/read_file.h"
-#include "utils/time.h"
 
 #include "monitor_info.grpc.pb.h"
 #include "monitor_info.pb.h"
 
 namespace monitor {
-void CpuLoadMonitor::RunOnce(monitor::proto::MonitorInfo* monitor_info) {
+void CpuLoadMonitor::UpdateOnce(monitor::proto::MonitorInfo* monitor_info) {
   ReadFile cpu_load_file(std::string("/proc/loadavg"));
   std::vector<std::string> cpu_load;
   cpu_load_file.ReadLine(&cpu_load);

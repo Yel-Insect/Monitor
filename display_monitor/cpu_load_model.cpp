@@ -50,7 +50,7 @@ void CpuLoadModel::UpdateMonitorInfo(
   endResetModel();
 
   return;
-}  // namespace monitor
+} 
 
 std::vector<QVariant> CpuLoadModel::insert_one_cpu_load(
     const monitor::proto::CpuLoad& cpu_load) {

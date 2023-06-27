@@ -1,11 +1,11 @@
 #pragma once
 
-#include <map>
 #include <string>
+#include <unordered_map>
 
 #include <boost/chrono.hpp>
 
- #include "monitor/monitor_inter.h"
+#include "monitor/monitor_inter.h"
 #include "monitor_info.grpc.pb.h"
 #include "monitor_info.pb.h"
 
@@ -28,11 +28,11 @@ class CpuSoftIrqMonitor : public MonitorInter {
 
  public:
   CpuSoftIrqMonitor() {}
-  void RunOnce(monitor::proto::MonitorInfo* monitor_info);
-  void Stop()override {}
+  void UpdateOnce(monitor::proto::MonitorInfo* monitor_info);
+  void Stop() override {}
 
  private:
-  std::map<std::string, struct SoftIrq> cpu_softirqs_;
+  std::unordered_map<std::string, struct SoftIrq> cpu_softirqs_;
 };
 
 }  // namespace monitor

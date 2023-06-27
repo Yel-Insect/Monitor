@@ -9,7 +9,7 @@ class MonitorInter {
  public:
   MonitorInter() {}
   virtual ~MonitorInter() {}
-  virtual void RunOnce(monitor::proto::MonitorInfo* monitor_info) = 0;
+  virtual void UpdateOnce(monitor::proto::MonitorInfo* monitor_info) = 0;
   virtual void Stop() = 0;
 };
 }  // namespace monitor

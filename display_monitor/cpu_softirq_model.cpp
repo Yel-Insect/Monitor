@@ -1,4 +1,4 @@
-#include "monitor_model.h"
+#include "cpu_softirq_model.h"
 
 namespace monitor {
 MonitorBaseModel::MonitorBaseModel(QObject* parent)
@@ -61,7 +61,7 @@ void MonitorBaseModel::UpdateMonitorInfo(
   endResetModel();
 
   return;
-}  // namespace monitor
+} 
 
 std::vector<QVariant> MonitorBaseModel::insert_one_soft_irq(
     const monitor::proto::SoftIrq& soft_irq) {

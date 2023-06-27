@@ -25,7 +25,7 @@ class CpuStatMonitor : public MonitorInter {
 
  public:
   CpuStatMonitor() {}
-  void RunOnce(monitor::proto::MonitorInfo* monitor_info);
+  void UpdateOnce(monitor::proto::MonitorInfo* monitor_info);
   void Stop() override {}
 
  private:

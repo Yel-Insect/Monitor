@@ -5,8 +5,8 @@
 #include <thread>
 
 #include "cpu_load_model.h"
+#include "cpu_softirq_model.h"
 #include "cpu_stat_model.h"
-#include "monitor_model.h"
 
 #include "monitor_info.grpc.pb.h"
 #include "monitor_info.pb.h"

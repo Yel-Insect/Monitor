@@ -9,7 +9,7 @@ find_package(Qt5
 set(SOURCES
     main.cpp
     monitor_inter.cpp
-    monitor_model.cpp
+    cpu_softirq_model.cpp
     cpu_load_model.cpp
     monitor_widget.cpp
     cpu_stat_model.cpp

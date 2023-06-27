@@ -3,7 +3,7 @@
 #include <boost/chrono.hpp>
 
 namespace monitor {
-class SteadyTime {
+class Utils {
  public:
   static double SteadyTimeSecond(
       const boost::chrono::steady_clock::time_point &t1,

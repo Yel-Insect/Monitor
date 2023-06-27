@@ -53,7 +53,7 @@ void CpuStatModel::UpdateMonitorInfo(
   endResetModel();
 
   return;
-}  // namespace monitor
+}
 
 std::vector<QVariant> CpuStatModel::insert_one_cpu_stat(
     const monitor::proto::CpuStat& cpu_stat) {
