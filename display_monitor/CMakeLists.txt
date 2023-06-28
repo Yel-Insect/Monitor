@@ -13,6 +13,8 @@ set(SOURCES
     cpu_load_model.cpp
     monitor_widget.cpp
     cpu_stat_model.cpp
+    mem_model.cpp
+    net_model.cpp
 )
 
 # source_group(TREE ${CMAKE_CURRENT_SOURCE_DIR} FILES ${SOURCES})

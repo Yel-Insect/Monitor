@@ -36,7 +36,7 @@ class NetModel : public MonitorInterModel {
   std::vector<std::vector<QVariant>> monitor_data_;
   QStringList header_;
 
-  enum NetModel {
+  enum NetModelInfo {
     NAME = 0,
     SEND_RATE,
     RCV_RATE,

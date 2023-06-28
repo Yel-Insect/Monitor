@@ -1,7 +1,8 @@
 #include "mem_model.h"
 
 namespace monitor {
-MemModel::CpuStatModel(QObject* parent) : MonitorInterModel(parent) {
+MemModel::MemModel(QObject* parent) : MonitorInterModel(parent) {
+  header_ << tr("used_percent");
   header_ << tr("total");
   header_ << tr("free");
   header_ << tr("avail");
@@ -118,13 +119,13 @@ std::vector<QVariant> MemModel::insert_one_mem_info(
         mem_info_list.push_back(QVariant(mem_info.mapped()));
         break;
       case MemInfo::KRECLAIMABLE:
-        mem_info_list.push_back(QVariant(mem_info.kReclaimable()));
+        mem_info_list.push_back(QVariant(mem_info.kreclaimable()));
         break;
       case MemInfo::SRECLAIMABLE:
-        mem_info_list.push_back(QVariant(mem_info.sReclaimable()));
+        mem_info_list.push_back(QVariant(mem_info.sreclaimable()));
         break;
       case MemInfo::SUNRECLAIM:
-        mem_info_list.push_back(QVariant(mem_info.sUnreclaim()));
+        mem_info_list.push_back(QVariant(mem_info.sunreclaim()));
         break;
       default:
         break;

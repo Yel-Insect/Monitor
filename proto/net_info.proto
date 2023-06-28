@@ -3,8 +3,8 @@ package monitor.proto;
 
 message NetInfo {
     string name = 1;
-    int64 send_rate = 2;
-    int64 rcv_rate = 3;
-    int64 send_packets_rate = 4;
-    int64 rcv_packets_rate = 5;
+    float send_rate = 2;
+    float rcv_rate = 3;
+    float send_packets_rate = 4;
+    float rcv_packets_rate = 5;
   }

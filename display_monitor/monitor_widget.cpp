@@ -8,6 +8,8 @@ QWidget *MonitorWidget::ShowAllMonitorWidget() {
   stack_menu_ = new QStackedLayout();
   stack_menu_->addWidget(InitCpuMonitorWidget());
   stack_menu_->addWidget(InitSoftIrqMonitorWidget());
+  stack_menu_->addWidget(InitMemMonitorWidget());
+  stack_menu_->addWidget(InitNetMonitorWidget());
 
   QGridLayout *layout = new QGridLayout(this);
   layout->addWidget(InitButtonMenu(), 1, 0);
@@ -19,19 +21,27 @@ QWidget *MonitorWidget::ShowAllMonitorWidget() {
 QWidget *MonitorWidget::InitButtonMenu() {
   QPushButton *cpu_button = new QPushButton("cpu", this);
   QPushButton *soft_irq_button = new QPushButton("soft_irq", this);
-  QFont *font = new QFont("Microsoft YaHei", 15, 60);
+  QPushButton *mem_button = new QPushButton("mem", this);
+  QPushButton *net_button = new QPushButton("net", this);
+  QFont *font = new QFont("Microsoft YaHei", 15, 40);
   cpu_button->setFont(*font);
   soft_irq_button->setFont(*font);
+  mem_button->setFont(*font);
+  net_button->setFont(*font);
 
   QHBoxLayout *layout = new QHBoxLayout();
   layout->addWidget(cpu_button);
   layout->addWidget(soft_irq_button);
+  layout->addWidget(mem_button);
+  layout->addWidget(net_button);
 
   QWidget *widget = new QWidget();
   widget->setLayout(layout);
 
   connect(cpu_button, SIGNAL(clicked()), this, SLOT(ClickCpuButton()));
   connect(soft_irq_button, SIGNAL(clicked()), this, SLOT(ClickSoftIrqButton()));
+  connect(mem_button, SIGNAL(clicked()), this, SLOT(ClickMemButton()));
+  connect(net_button, SIGNAL(clicked()), this, SLOT(ClickNetButton()));
 
   return widget;
 }
@@ -59,11 +69,11 @@ QWidget *MonitorWidget::InitCpuMonitorWidget() {
 
   QGridLayout *layout = new QGridLayout();
 
-  layout->addWidget(cpu_load_label, 1, 0);
-  layout->addWidget(cpu_load_monitor_view_, 2, 0, 1, 1);
+  layout->addWidget(cpu_load_label, 3, 0);
+  layout->addWidget(cpu_load_monitor_view_, 4, 0, 2, 2);
 
-  layout->addWidget(cpu_stat_label, 3, 0);
-  layout->addWidget(cpu_stat_monitor_view_, 4, 0, 1, 2);
+  layout->addWidget(cpu_stat_label, 1, 0, 1, 1);
+  layout->addWidget(cpu_stat_monitor_view_, 2, 0, 1, 2);
 
   widget->setLayout(layout);
   return widget;
@@ -91,13 +101,59 @@ QWidget *MonitorWidget::InitSoftIrqMonitorWidget() {
   return widget;
 }
 
+QWidget *MonitorWidget::InitMemMonitorWidget() {
+  QWidget *widget = new QWidget();
+
+  QLabel *mem_label = new QLabel(this);
+  mem_label->setText(tr("Monitor mem:"));
+  mem_label->setFont(QFont("Microsoft YaHei", 10, 40));
+
+  mem_monitor_view_ = new QTableView;
+  mem_model_ = new MemModel;
+  mem_monitor_view_->setModel(mem_model_);
+  mem_monitor_view_->show();
+
+  QGridLayout *layout = new QGridLayout();
+
+  layout->addWidget(mem_label, 1, 0);
+  layout->addWidget(mem_monitor_view_, 2, 0, 1, 1);
+
+  widget->setLayout(layout);
+  return widget;
+}
+
+QWidget *MonitorWidget::InitNetMonitorWidget() {
+  QWidget *widget = new QWidget();
+
+  QLabel *net_label = new QLabel(this);
+  net_label->setText(tr("Monitor net:"));
+  net_label->setFont(QFont("Microsoft YaHei", 10, 40));
+
+  net_monitor_view_ = new QTableView;
+  net_model_ = new NetModel;
+  net_monitor_view_->setModel(net_model_);
+  net_monitor_view_->show();
+
+  QGridLayout *layout = new QGridLayout();
+
+  layout->addWidget(net_label, 1, 0);
+  layout->addWidget(net_monitor_view_, 2, 0, 1, 1);
+
+  widget->setLayout(layout);
+  return widget;
+}
+
 void MonitorWidget::UpdateData(
     const monitor::proto::MonitorInfo &monitor_info) {
   monitor_model_->UpdateMonitorInfo(monitor_info);
   cpu_load_model_->UpdateMonitorInfo(monitor_info);
   cpu_stat_model_->UpdateMonitorInfo(monitor_info);
+  mem_model_->UpdateMonitorInfo(monitor_info);
+  net_model_->UpdateMonitorInfo(monitor_info);
 }
 
 void MonitorWidget::ClickCpuButton() { stack_menu_->setCurrentIndex(0); }
 void MonitorWidget::ClickSoftIrqButton() { stack_menu_->setCurrentIndex(1); }
+void MonitorWidget::ClickMemButton() { stack_menu_->setCurrentIndex(2); }
+void MonitorWidget::ClickNetButton() { stack_menu_->setCurrentIndex(3); }
 }  // namespace monitor

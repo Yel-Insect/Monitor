@@ -2,15 +2,13 @@
 #include "utils/read_file.h"
 
 namespace monitor {
-static constexpr float KBToMB = 1024.00;
+static constexpr float KBToGB = 1000 * 1000;
 
 void MemMonitor::UpdateOnce(monitor::proto::MonitorInfo* monitor_info) {
   ReadFile mem_file("/proc/meminfo");
   struct MenInfo mem_info;
   std::vector<std::string> mem_datas;
   while (mem_file.ReadLine(&mem_datas)) {
-    const char* mem_first = mem_datas[0].c_str();
-
     if (mem_datas[0] == "MemTotal:") {
       mem_info.total = std::stoll(mem_datas[1]);
     } else if (mem_datas[0] == "MemFree:") {
@@ -50,30 +48,32 @@ void MemMonitor::UpdateOnce(monitor::proto::MonitorInfo* monitor_info) {
     } else if (mem_datas[0] == "SUnreclaim:") {
       mem_info.sUnreclaim = std::stoll(mem_datas[1]);
     }
+    mem_datas.clear();
   }
 
   auto mem_detail = monitor_info->mutable_mem_info();
 
-  mem_detail->set_used_percent(mem_info.total -
-                               mem_info.avail / mem_info.total * 100.0);
-  mem_detail->set_free(mem_info.avail / KBToMB);
-  mem_detail->set_avail(mem_info.free / KBToMB);
-  mem_detail->set_buffers(mem_info.buffers / KBToMB);
-  mem_detail->set_cached(mem_info.cached / KBToMB);
-  mem_detail->set_swap_cached(mem_info.swap_cached / KBToMB);
-  mem_detail->set_active(mem_info.active / KBToMB);
-  mem_detail->set_inactive(mem_info.in_active / KBToMB);
-  mem_detail->set_active_anon(mem_info.active_anon / KBToMB);
-  mem_detail->set_inactive_anon(mem_info.inactive_anon / KBToMB);
-  mem_detail->set_active_file(mem_info.active_file / KBToMB);
-  mem_detail->set_inactive_file(mem_info.inactive_file / KBToMB);
-  mem_detail->set_dirty(mem_info.dirty / KBToMB);
-  mem_detail->set_writeback(mem_info.writeback / KBToMB);
-  mem_detail->set_anon_pages(mem_info.anon_pages / KBToMB);
-  mem_detail->set_mapped(mem_info.mapped / KBToMB);
-  mem_detail->set_kreclaimable(mem_info.kReclaimable / KBToMB);
-  mem_detail->set_sreclaimable(mem_info.sReclaimable / KBToMB);
-  mem_detail->set_sunreclaim(mem_info.sUnreclaim / KBToMB);
+  mem_detail->set_used_percent((mem_info.total - mem_info.avail) * 1.0 /
+                               mem_info.total * 100.0);
+  mem_detail->set_total(mem_info.total / KBToGB);
+  mem_detail->set_free(mem_info.free / KBToGB);
+  mem_detail->set_avail(mem_info.avail / KBToGB);
+  mem_detail->set_buffers(mem_info.buffers / KBToGB);
+  mem_detail->set_cached(mem_info.cached / KBToGB);
+  mem_detail->set_swap_cached(mem_info.swap_cached / KBToGB);
+  mem_detail->set_active(mem_info.active / KBToGB);
+  mem_detail->set_inactive(mem_info.in_active / KBToGB);
+  mem_detail->set_active_anon(mem_info.active_anon / KBToGB);
+  mem_detail->set_inactive_anon(mem_info.inactive_anon / KBToGB);
+  mem_detail->set_active_file(mem_info.active_file / KBToGB);
+  mem_detail->set_inactive_file(mem_info.inactive_file / KBToGB);
+  mem_detail->set_dirty(mem_info.dirty / KBToGB);
+  mem_detail->set_writeback(mem_info.writeback / KBToGB);
+  mem_detail->set_anon_pages(mem_info.anon_pages / KBToGB);
+  mem_detail->set_mapped(mem_info.mapped / KBToGB);
+  mem_detail->set_kreclaimable(mem_info.kReclaimable / KBToGB);
+  mem_detail->set_sreclaimable(mem_info.sReclaimable / KBToGB);
+  mem_detail->set_sunreclaim(mem_info.sUnreclaim / KBToGB);
 
   return;
 }

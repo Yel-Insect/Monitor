@@ -2,7 +2,7 @@
 
 namespace monitor {
 
-NetModel::CpuStatModel(QObject* parent) : MonitorInterModel(parent) {
+NetModel::NetModel(QObject* parent) : MonitorInterModel(parent) {
   header_ << tr("name");
   header_ << tr("send_rate");
   header_ << tr("rcv_rate");
@@ -44,8 +44,8 @@ void NetModel::UpdateMonitorInfo(
   beginResetModel();
   monitor_data_.clear();
 
-  for (int i = 0; i < monito_info.net_info_size(); i++) {
-    monitor_data_.push_back(insert_one_net_info(monito_info.net_info(i)));
+  for (int i = 0; i < monitor_info.net_info_size(); i++) {
+    monitor_data_.push_back(insert_one_net_info(monitor_info.net_info(i)));
   }
 
   // QModelIndex leftTop = createIndex(0, 0);
@@ -60,27 +60,27 @@ void NetModel::UpdateMonitorInfo(
 std::vector<QVariant> NetModel::insert_one_net_info(
     const monitor::proto::NetInfo& net_info) {
   std::vector<QVariant> net_info_list;
-  for (int i = NetInfo::NAME; i < COLUMN_MAX; i++) {
+  for (int i = NetModelInfo::NAME; i < COLUMN_MAX; i++) {
     switch (i) {
-      case NetInfo::NAME:
+      case NetModelInfo::NAME:
         net_info_list.push_back(QString::fromStdString(net_info.name()));
         break;
-      case NetInfo::SEND_RATE:
+      case NetModelInfo::SEND_RATE:
         net_info_list.push_back(QVariant(net_info.send_rate()));
         break;
-      case NetInfo::RCV_RATE:
+      case NetModelInfo::RCV_RATE:
         net_info_list.push_back(QVariant(net_info.rcv_rate()));
         break;
-      case NetInfo::SEND_PACKETS_RATE:
+      case NetModelInfo::SEND_PACKETS_RATE:
         net_info_list.push_back(QVariant(net_info.send_packets_rate()));
         break;
-      case NetInfo::RCV_PACKETS_RATE:
+      case NetModelInfo::RCV_PACKETS_RATE:
         net_info_list.push_back(QVariant(net_info.rcv_packets_rate()));
         break;
       default:
         break;
     }
   }
-  return mem_info_list;
+  return net_info_list;
 }
 }  // namespace monitor
