@@ -11,7 +11,11 @@ int main(int argc, char* argv[]) {
   monitor::RpcClient rpc_client;
   monitor::proto::MonitorInfo monitor_info;
 
-  QWidget* widget = moitor_widget.ShowAllMonitorWidget();
+  //get board name
+  rpc_client.GetMonitorInfo(&monitor_info);
+  std::string name = monitor_info.name();
+
+  QWidget* widget = moitor_widget.ShowAllMonitorWidget(name);
   widget->show();
 
   std::unique_ptr<std::thread> thread_;
@@ -19,6 +23,7 @@ int main(int argc, char* argv[]) {
     while (true) {
       monitor_info.Clear();
       rpc_client.GetMonitorInfo(&monitor_info);
+
       moitor_widget.UpdateData(monitor_info);
       std::this_thread::sleep_for(std::chrono::seconds(2));
     }

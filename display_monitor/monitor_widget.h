@@ -3,6 +3,7 @@
 #include <QStandardItemModel>
 #include <QtWidgets>
 #include <thread>
+#include <string>
 
 #include "cpu_load_model.h"
 #include "cpu_softirq_model.h"
@@ -12,6 +13,7 @@
 
 #include "monitor_info.grpc.pb.h"
 #include "monitor_info.pb.h"
+
 
 namespace monitor {
 class MonitorWidget : public QWidget {
@@ -24,12 +26,12 @@ class MonitorWidget : public QWidget {
     //   thread_->join();
     // }
   }
-  QWidget* ShowAllMonitorWidget();
+  QWidget* ShowAllMonitorWidget(const std::string& name);
   QWidget* InitCpuMonitorWidget();
   QWidget* InitSoftIrqMonitorWidget();
   QWidget* InitMemMonitorWidget();
   QWidget* InitNetMonitorWidget();
-  QWidget* InitButtonMenu();
+  QWidget* InitButtonMenu(const std::string& name);
   // QWidget* InitMemMonitorWidget();
 
   void UpdateData(const monitor::proto::MonitorInfo& monitor_info);

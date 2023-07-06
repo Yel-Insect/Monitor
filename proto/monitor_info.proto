@@ -77,6 +77,7 @@ import "cpu_load.proto";
 
 
 message MonitorInfo{
+  string name = 1;
   repeated SoftIrq soft_irq = 4;
   CpuLoad cpu_load = 5;
   repeated CpuStat cpu_stat = 6;
