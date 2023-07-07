@@ -7,7 +7,7 @@ SHELL ["/bin/bash", "-c"]
 
 RUN apt-get clean && \
     apt-get autoclean
-# COPY apt/sources.list /etc/apt/
+COPY apt/sources.list /etc/apt/
 
 RUN apt-get update  && apt-get upgrade -y  && \
     apt-get install -y \
