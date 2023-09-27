@@ -32,6 +32,11 @@
 #include <google/protobuf/extension_set.h>  // IWYU pragma: export
 #include <google/protobuf/unknown_field_set.h>
 #include <google/protobuf/empty.pb.h>
+#include "net_info.pb.h"
+#include "mem_info.pb.h"
+#include "cpu_stat.pb.h"
+#include "cpu_softirq.pb.h"
+#include "cpu_load.pb.h"
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 #define PROTOBUF_INTERNAL_EXPORT_monitor_5finfo_2eproto
@@ -47,7 +52,7 @@ struct TableStruct_monitor_5finfo_2eproto {
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::AuxiliaryParseTableField aux[]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
-  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[4]
+  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[1]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::FieldMetadata field_metadata[];
   static const ::PROTOBUF_NAMESPACE_ID::internal::SerializationTable serialization_table[];
@@ -56,617 +61,18 @@ struct TableStruct_monitor_5finfo_2eproto {
 extern const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_monitor_5finfo_2eproto;
 namespace monitor {
 namespace proto {
-class CpuLoad;
-class CpuLoadDefaultTypeInternal;
-extern CpuLoadDefaultTypeInternal _CpuLoad_default_instance_;
-class CpuStat;
-class CpuStatDefaultTypeInternal;
-extern CpuStatDefaultTypeInternal _CpuStat_default_instance_;
 class MonitorInfo;
 class MonitorInfoDefaultTypeInternal;
 extern MonitorInfoDefaultTypeInternal _MonitorInfo_default_instance_;
-class SoftIrq;
-class SoftIrqDefaultTypeInternal;
-extern SoftIrqDefaultTypeInternal _SoftIrq_default_instance_;
 }  // namespace proto
 }  // namespace monitor
 PROTOBUF_NAMESPACE_OPEN
-template<> ::monitor::proto::CpuLoad* Arena::CreateMaybeMessage<::monitor::proto::CpuLoad>(Arena*);
-template<> ::monitor::proto::CpuStat* Arena::CreateMaybeMessage<::monitor::proto::CpuStat>(Arena*);
 template<> ::monitor::proto::MonitorInfo* Arena::CreateMaybeMessage<::monitor::proto::MonitorInfo>(Arena*);
-template<> ::monitor::proto::SoftIrq* Arena::CreateMaybeMessage<::monitor::proto::SoftIrq>(Arena*);
 PROTOBUF_NAMESPACE_CLOSE
 namespace monitor {
 namespace proto {
 
 // ===================================================================
-
-class SoftIrq PROTOBUF_FINAL :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:monitor.proto.SoftIrq) */ {
- public:
-  inline SoftIrq() : SoftIrq(nullptr) {}
-  virtual ~SoftIrq();
-
-  SoftIrq(const SoftIrq& from);
-  SoftIrq(SoftIrq&& from) noexcept
-    : SoftIrq() {
-    *this = ::std::move(from);
-  }
-
-  inline SoftIrq& operator=(const SoftIrq& from) {
-    CopyFrom(from);
-    return *this;
-  }
-  inline SoftIrq& operator=(SoftIrq&& from) noexcept {
-    if (GetArena() == from.GetArena()) {
-      if (this != &from) InternalSwap(&from);
-    } else {
-      CopyFrom(from);
-    }
-    return *this;
-  }
-
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return GetMetadataStatic().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return GetMetadataStatic().reflection;
-  }
-  static const SoftIrq& default_instance();
-
-  static inline const SoftIrq* internal_default_instance() {
-    return reinterpret_cast<const SoftIrq*>(
-               &_SoftIrq_default_instance_);
-  }
-  static constexpr int kIndexInFileMessages =
-    0;
-
-  friend void swap(SoftIrq& a, SoftIrq& b) {
-    a.Swap(&b);
-  }
-  inline void Swap(SoftIrq* other) {
-    if (other == this) return;
-    if (GetArena() == other->GetArena()) {
-      InternalSwap(other);
-    } else {
-      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
-    }
-  }
-  void UnsafeArenaSwap(SoftIrq* other) {
-    if (other == this) return;
-    GOOGLE_DCHECK(GetArena() == other->GetArena());
-    InternalSwap(other);
-  }
-
-  // implements Message ----------------------------------------------
-
-  inline SoftIrq* New() const final {
-    return CreateMaybeMessage<SoftIrq>(nullptr);
-  }
-
-  SoftIrq* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
-    return CreateMaybeMessage<SoftIrq>(arena);
-  }
-  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
-  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
-  void CopyFrom(const SoftIrq& from);
-  void MergeFrom(const SoftIrq& from);
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
-      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _cached_size_.Get(); }
-
-  private:
-  inline void SharedCtor();
-  inline void SharedDtor();
-  void SetCachedSize(int size) const final;
-  void InternalSwap(SoftIrq* other);
-  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
-  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "monitor.proto.SoftIrq";
-  }
-  protected:
-  explicit SoftIrq(::PROTOBUF_NAMESPACE_ID::Arena* arena);
-  private:
-  static void ArenaDtor(void* object);
-  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
-  public:
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
-  private:
-  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
-    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_monitor_5finfo_2eproto);
-    return ::descriptor_table_monitor_5finfo_2eproto.file_level_metadata[kIndexInFileMessages];
-  }
-
-  public:
-
-  // nested types ----------------------------------------------------
-
-  // accessors -------------------------------------------------------
-
-  enum : int {
-    kCpuFieldNumber = 1,
-    kHiFieldNumber = 2,
-    kTimerFieldNumber = 3,
-    kNetTxFieldNumber = 4,
-    kNetRxFieldNumber = 5,
-    kBlockFieldNumber = 6,
-    kIrqPollFieldNumber = 7,
-    kTaskletFieldNumber = 8,
-    kSchedFieldNumber = 9,
-    kHrtimerFieldNumber = 10,
-    kRcuFieldNumber = 11,
-  };
-  // string cpu = 1;
-  void clear_cpu();
-  const std::string& cpu() const;
-  void set_cpu(const std::string& value);
-  void set_cpu(std::string&& value);
-  void set_cpu(const char* value);
-  void set_cpu(const char* value, size_t size);
-  std::string* mutable_cpu();
-  std::string* release_cpu();
-  void set_allocated_cpu(std::string* cpu);
-  private:
-  const std::string& _internal_cpu() const;
-  void _internal_set_cpu(const std::string& value);
-  std::string* _internal_mutable_cpu();
-  public:
-
-  // float hi = 2;
-  void clear_hi();
-  float hi() const;
-  void set_hi(float value);
-  private:
-  float _internal_hi() const;
-  void _internal_set_hi(float value);
-  public:
-
-  // float timer = 3;
-  void clear_timer();
-  float timer() const;
-  void set_timer(float value);
-  private:
-  float _internal_timer() const;
-  void _internal_set_timer(float value);
-  public:
-
-  // float net_tx = 4;
-  void clear_net_tx();
-  float net_tx() const;
-  void set_net_tx(float value);
-  private:
-  float _internal_net_tx() const;
-  void _internal_set_net_tx(float value);
-  public:
-
-  // float net_rx = 5;
-  void clear_net_rx();
-  float net_rx() const;
-  void set_net_rx(float value);
-  private:
-  float _internal_net_rx() const;
-  void _internal_set_net_rx(float value);
-  public:
-
-  // float block = 6;
-  void clear_block();
-  float block() const;
-  void set_block(float value);
-  private:
-  float _internal_block() const;
-  void _internal_set_block(float value);
-  public:
-
-  // float irq_poll = 7;
-  void clear_irq_poll();
-  float irq_poll() const;
-  void set_irq_poll(float value);
-  private:
-  float _internal_irq_poll() const;
-  void _internal_set_irq_poll(float value);
-  public:
-
-  // float tasklet = 8;
-  void clear_tasklet();
-  float tasklet() const;
-  void set_tasklet(float value);
-  private:
-  float _internal_tasklet() const;
-  void _internal_set_tasklet(float value);
-  public:
-
-  // float sched = 9;
-  void clear_sched();
-  float sched() const;
-  void set_sched(float value);
-  private:
-  float _internal_sched() const;
-  void _internal_set_sched(float value);
-  public:
-
-  // float hrtimer = 10;
-  void clear_hrtimer();
-  float hrtimer() const;
-  void set_hrtimer(float value);
-  private:
-  float _internal_hrtimer() const;
-  void _internal_set_hrtimer(float value);
-  public:
-
-  // float rcu = 11;
-  void clear_rcu();
-  float rcu() const;
-  void set_rcu(float value);
-  private:
-  float _internal_rcu() const;
-  void _internal_set_rcu(float value);
-  public:
-
-  // @@protoc_insertion_point(class_scope:monitor.proto.SoftIrq)
- private:
-  class _Internal;
-
-  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
-  typedef void InternalArenaConstructable_;
-  typedef void DestructorSkippable_;
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr cpu_;
-  float hi_;
-  float timer_;
-  float net_tx_;
-  float net_rx_;
-  float block_;
-  float irq_poll_;
-  float tasklet_;
-  float sched_;
-  float hrtimer_;
-  float rcu_;
-  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-  friend struct ::TableStruct_monitor_5finfo_2eproto;
-};
-// -------------------------------------------------------------------
-
-class CpuLoad PROTOBUF_FINAL :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:monitor.proto.CpuLoad) */ {
- public:
-  inline CpuLoad() : CpuLoad(nullptr) {}
-  virtual ~CpuLoad();
-
-  CpuLoad(const CpuLoad& from);
-  CpuLoad(CpuLoad&& from) noexcept
-    : CpuLoad() {
-    *this = ::std::move(from);
-  }
-
-  inline CpuLoad& operator=(const CpuLoad& from) {
-    CopyFrom(from);
-    return *this;
-  }
-  inline CpuLoad& operator=(CpuLoad&& from) noexcept {
-    if (GetArena() == from.GetArena()) {
-      if (this != &from) InternalSwap(&from);
-    } else {
-      CopyFrom(from);
-    }
-    return *this;
-  }
-
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return GetMetadataStatic().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return GetMetadataStatic().reflection;
-  }
-  static const CpuLoad& default_instance();
-
-  static inline const CpuLoad* internal_default_instance() {
-    return reinterpret_cast<const CpuLoad*>(
-               &_CpuLoad_default_instance_);
-  }
-  static constexpr int kIndexInFileMessages =
-    1;
-
-  friend void swap(CpuLoad& a, CpuLoad& b) {
-    a.Swap(&b);
-  }
-  inline void Swap(CpuLoad* other) {
-    if (other == this) return;
-    if (GetArena() == other->GetArena()) {
-      InternalSwap(other);
-    } else {
-      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
-    }
-  }
-  void UnsafeArenaSwap(CpuLoad* other) {
-    if (other == this) return;
-    GOOGLE_DCHECK(GetArena() == other->GetArena());
-    InternalSwap(other);
-  }
-
-  // implements Message ----------------------------------------------
-
-  inline CpuLoad* New() const final {
-    return CreateMaybeMessage<CpuLoad>(nullptr);
-  }
-
-  CpuLoad* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
-    return CreateMaybeMessage<CpuLoad>(arena);
-  }
-  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
-  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
-  void CopyFrom(const CpuLoad& from);
-  void MergeFrom(const CpuLoad& from);
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
-      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _cached_size_.Get(); }
-
-  private:
-  inline void SharedCtor();
-  inline void SharedDtor();
-  void SetCachedSize(int size) const final;
-  void InternalSwap(CpuLoad* other);
-  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
-  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "monitor.proto.CpuLoad";
-  }
-  protected:
-  explicit CpuLoad(::PROTOBUF_NAMESPACE_ID::Arena* arena);
-  private:
-  static void ArenaDtor(void* object);
-  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
-  public:
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
-  private:
-  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
-    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_monitor_5finfo_2eproto);
-    return ::descriptor_table_monitor_5finfo_2eproto.file_level_metadata[kIndexInFileMessages];
-  }
-
-  public:
-
-  // nested types ----------------------------------------------------
-
-  // accessors -------------------------------------------------------
-
-  enum : int {
-    kLoadAvg1FieldNumber = 1,
-    kLoadAvg3FieldNumber = 2,
-    kLoadAvg15FieldNumber = 3,
-  };
-  // float load_avg_1 = 1;
-  void clear_load_avg_1();
-  float load_avg_1() const;
-  void set_load_avg_1(float value);
-  private:
-  float _internal_load_avg_1() const;
-  void _internal_set_load_avg_1(float value);
-  public:
-
-  // float load_avg_3 = 2;
-  void clear_load_avg_3();
-  float load_avg_3() const;
-  void set_load_avg_3(float value);
-  private:
-  float _internal_load_avg_3() const;
-  void _internal_set_load_avg_3(float value);
-  public:
-
-  // float load_avg_15 = 3;
-  void clear_load_avg_15();
-  float load_avg_15() const;
-  void set_load_avg_15(float value);
-  private:
-  float _internal_load_avg_15() const;
-  void _internal_set_load_avg_15(float value);
-  public:
-
-  // @@protoc_insertion_point(class_scope:monitor.proto.CpuLoad)
- private:
-  class _Internal;
-
-  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
-  typedef void InternalArenaConstructable_;
-  typedef void DestructorSkippable_;
-  float load_avg_1_;
-  float load_avg_3_;
-  float load_avg_15_;
-  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-  friend struct ::TableStruct_monitor_5finfo_2eproto;
-};
-// -------------------------------------------------------------------
-
-class CpuStat PROTOBUF_FINAL :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:monitor.proto.CpuStat) */ {
- public:
-  inline CpuStat() : CpuStat(nullptr) {}
-  virtual ~CpuStat();
-
-  CpuStat(const CpuStat& from);
-  CpuStat(CpuStat&& from) noexcept
-    : CpuStat() {
-    *this = ::std::move(from);
-  }
-
-  inline CpuStat& operator=(const CpuStat& from) {
-    CopyFrom(from);
-    return *this;
-  }
-  inline CpuStat& operator=(CpuStat&& from) noexcept {
-    if (GetArena() == from.GetArena()) {
-      if (this != &from) InternalSwap(&from);
-    } else {
-      CopyFrom(from);
-    }
-    return *this;
-  }
-
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return GetMetadataStatic().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return GetMetadataStatic().reflection;
-  }
-  static const CpuStat& default_instance();
-
-  static inline const CpuStat* internal_default_instance() {
-    return reinterpret_cast<const CpuStat*>(
-               &_CpuStat_default_instance_);
-  }
-  static constexpr int kIndexInFileMessages =
-    2;
-
-  friend void swap(CpuStat& a, CpuStat& b) {
-    a.Swap(&b);
-  }
-  inline void Swap(CpuStat* other) {
-    if (other == this) return;
-    if (GetArena() == other->GetArena()) {
-      InternalSwap(other);
-    } else {
-      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
-    }
-  }
-  void UnsafeArenaSwap(CpuStat* other) {
-    if (other == this) return;
-    GOOGLE_DCHECK(GetArena() == other->GetArena());
-    InternalSwap(other);
-  }
-
-  // implements Message ----------------------------------------------
-
-  inline CpuStat* New() const final {
-    return CreateMaybeMessage<CpuStat>(nullptr);
-  }
-
-  CpuStat* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
-    return CreateMaybeMessage<CpuStat>(arena);
-  }
-  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
-  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
-  void CopyFrom(const CpuStat& from);
-  void MergeFrom(const CpuStat& from);
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
-      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _cached_size_.Get(); }
-
-  private:
-  inline void SharedCtor();
-  inline void SharedDtor();
-  void SetCachedSize(int size) const final;
-  void InternalSwap(CpuStat* other);
-  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
-  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "monitor.proto.CpuStat";
-  }
-  protected:
-  explicit CpuStat(::PROTOBUF_NAMESPACE_ID::Arena* arena);
-  private:
-  static void ArenaDtor(void* object);
-  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
-  public:
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
-  private:
-  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
-    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_monitor_5finfo_2eproto);
-    return ::descriptor_table_monitor_5finfo_2eproto.file_level_metadata[kIndexInFileMessages];
-  }
-
-  public:
-
-  // nested types ----------------------------------------------------
-
-  // accessors -------------------------------------------------------
-
-  enum : int {
-    kCpuNameFieldNumber = 1,
-    kCpuPercentFieldNumber = 2,
-    kUsrPercentFieldNumber = 3,
-    kSystemPercentFieldNumber = 4,
-  };
-  // string cpu_name = 1;
-  void clear_cpu_name();
-  const std::string& cpu_name() const;
-  void set_cpu_name(const std::string& value);
-  void set_cpu_name(std::string&& value);
-  void set_cpu_name(const char* value);
-  void set_cpu_name(const char* value, size_t size);
-  std::string* mutable_cpu_name();
-  std::string* release_cpu_name();
-  void set_allocated_cpu_name(std::string* cpu_name);
-  private:
-  const std::string& _internal_cpu_name() const;
-  void _internal_set_cpu_name(const std::string& value);
-  std::string* _internal_mutable_cpu_name();
-  public:
-
-  // float cpu_percent = 2;
-  void clear_cpu_percent();
-  float cpu_percent() const;
-  void set_cpu_percent(float value);
-  private:
-  float _internal_cpu_percent() const;
-  void _internal_set_cpu_percent(float value);
-  public:
-
-  // float usr_percent = 3;
-  void clear_usr_percent();
-  float usr_percent() const;
-  void set_usr_percent(float value);
-  private:
-  float _internal_usr_percent() const;
-  void _internal_set_usr_percent(float value);
-  public:
-
-  // float system_percent = 4;
-  void clear_system_percent();
-  float system_percent() const;
-  void set_system_percent(float value);
-  private:
-  float _internal_system_percent() const;
-  void _internal_set_system_percent(float value);
-  public:
-
-  // @@protoc_insertion_point(class_scope:monitor.proto.CpuStat)
- private:
-  class _Internal;
-
-  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
-  typedef void InternalArenaConstructable_;
-  typedef void DestructorSkippable_;
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr cpu_name_;
-  float cpu_percent_;
-  float usr_percent_;
-  float system_percent_;
-  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-  friend struct ::TableStruct_monitor_5finfo_2eproto;
-};
-// -------------------------------------------------------------------
 
 class MonitorInfo PROTOBUF_FINAL :
     public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:monitor.proto.MonitorInfo) */ {
@@ -709,7 +115,7 @@ class MonitorInfo PROTOBUF_FINAL :
                &_MonitorInfo_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    3;
+    0;
 
   friend void swap(MonitorInfo& a, MonitorInfo& b) {
     a.Swap(&b);
@@ -782,7 +188,10 @@ class MonitorInfo PROTOBUF_FINAL :
   enum : int {
     kSoftIrqFieldNumber = 4,
     kCpuStatFieldNumber = 6,
+    kNetInfoFieldNumber = 8,
+    kNameFieldNumber = 1,
     kCpuLoadFieldNumber = 5,
+    kMemInfoFieldNumber = 7,
   };
   // repeated .monitor.proto.SoftIrq soft_irq = 4;
   int soft_irq_size() const;
@@ -820,6 +229,40 @@ class MonitorInfo PROTOBUF_FINAL :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::monitor::proto::CpuStat >&
       cpu_stat() const;
 
+  // repeated .monitor.proto.NetInfo net_info = 8;
+  int net_info_size() const;
+  private:
+  int _internal_net_info_size() const;
+  public:
+  void clear_net_info();
+  ::monitor::proto::NetInfo* mutable_net_info(int index);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::monitor::proto::NetInfo >*
+      mutable_net_info();
+  private:
+  const ::monitor::proto::NetInfo& _internal_net_info(int index) const;
+  ::monitor::proto::NetInfo* _internal_add_net_info();
+  public:
+  const ::monitor::proto::NetInfo& net_info(int index) const;
+  ::monitor::proto::NetInfo* add_net_info();
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::monitor::proto::NetInfo >&
+      net_info() const;
+
+  // string name = 1;
+  void clear_name();
+  const std::string& name() const;
+  void set_name(const std::string& value);
+  void set_name(std::string&& value);
+  void set_name(const char* value);
+  void set_name(const char* value, size_t size);
+  std::string* mutable_name();
+  std::string* release_name();
+  void set_allocated_name(std::string* name);
+  private:
+  const std::string& _internal_name() const;
+  void _internal_set_name(const std::string& value);
+  std::string* _internal_mutable_name();
+  public:
+
   // .monitor.proto.CpuLoad cpu_load = 5;
   bool has_cpu_load() const;
   private:
@@ -838,6 +281,24 @@ class MonitorInfo PROTOBUF_FINAL :
       ::monitor::proto::CpuLoad* cpu_load);
   ::monitor::proto::CpuLoad* unsafe_arena_release_cpu_load();
 
+  // .monitor.proto.MemInfo mem_info = 7;
+  bool has_mem_info() const;
+  private:
+  bool _internal_has_mem_info() const;
+  public:
+  void clear_mem_info();
+  const ::monitor::proto::MemInfo& mem_info() const;
+  ::monitor::proto::MemInfo* release_mem_info();
+  ::monitor::proto::MemInfo* mutable_mem_info();
+  void set_allocated_mem_info(::monitor::proto::MemInfo* mem_info);
+  private:
+  const ::monitor::proto::MemInfo& _internal_mem_info() const;
+  ::monitor::proto::MemInfo* _internal_mutable_mem_info();
+  public:
+  void unsafe_arena_set_allocated_mem_info(
+      ::monitor::proto::MemInfo* mem_info);
+  ::monitor::proto::MemInfo* unsafe_arena_release_mem_info();
+
   // @@protoc_insertion_point(class_scope:monitor.proto.MonitorInfo)
  private:
   class _Internal;
@@ -847,7 +308,10 @@ class MonitorInfo PROTOBUF_FINAL :
   typedef void DestructorSkippable_;
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::monitor::proto::SoftIrq > soft_irq_;
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::monitor::proto::CpuStat > cpu_stat_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::monitor::proto::NetInfo > net_info_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr name_;
   ::monitor::proto::CpuLoad* cpu_load_;
+  ::monitor::proto::MemInfo* mem_info_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_monitor_5finfo_2eproto;
 };
@@ -860,461 +324,68 @@ class MonitorInfo PROTOBUF_FINAL :
   #pragma GCC diagnostic push
   #pragma GCC diagnostic ignored "-Wstrict-aliasing"
 #endif  // __GNUC__
-// SoftIrq
-
-// string cpu = 1;
-inline void SoftIrq::clear_cpu() {
-  cpu_.ClearToEmpty();
-}
-inline const std::string& SoftIrq::cpu() const {
-  // @@protoc_insertion_point(field_get:monitor.proto.SoftIrq.cpu)
-  return _internal_cpu();
-}
-inline void SoftIrq::set_cpu(const std::string& value) {
-  _internal_set_cpu(value);
-  // @@protoc_insertion_point(field_set:monitor.proto.SoftIrq.cpu)
-}
-inline std::string* SoftIrq::mutable_cpu() {
-  // @@protoc_insertion_point(field_mutable:monitor.proto.SoftIrq.cpu)
-  return _internal_mutable_cpu();
-}
-inline const std::string& SoftIrq::_internal_cpu() const {
-  return cpu_.Get();
-}
-inline void SoftIrq::_internal_set_cpu(const std::string& value) {
-  
-  cpu_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArena());
-}
-inline void SoftIrq::set_cpu(std::string&& value) {
-  
-  cpu_.Set(
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:monitor.proto.SoftIrq.cpu)
-}
-inline void SoftIrq::set_cpu(const char* value) {
-  GOOGLE_DCHECK(value != nullptr);
-  
-  cpu_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(value), GetArena());
-  // @@protoc_insertion_point(field_set_char:monitor.proto.SoftIrq.cpu)
-}
-inline void SoftIrq::set_cpu(const char* value,
-    size_t size) {
-  
-  cpu_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(
-      reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:monitor.proto.SoftIrq.cpu)
-}
-inline std::string* SoftIrq::_internal_mutable_cpu() {
-  
-  return cpu_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArena());
-}
-inline std::string* SoftIrq::release_cpu() {
-  // @@protoc_insertion_point(field_release:monitor.proto.SoftIrq.cpu)
-  return cpu_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-}
-inline void SoftIrq::set_allocated_cpu(std::string* cpu) {
-  if (cpu != nullptr) {
-    
-  } else {
-    
-  }
-  cpu_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), cpu,
-      GetArena());
-  // @@protoc_insertion_point(field_set_allocated:monitor.proto.SoftIrq.cpu)
-}
-
-// float hi = 2;
-inline void SoftIrq::clear_hi() {
-  hi_ = 0;
-}
-inline float SoftIrq::_internal_hi() const {
-  return hi_;
-}
-inline float SoftIrq::hi() const {
-  // @@protoc_insertion_point(field_get:monitor.proto.SoftIrq.hi)
-  return _internal_hi();
-}
-inline void SoftIrq::_internal_set_hi(float value) {
-  
-  hi_ = value;
-}
-inline void SoftIrq::set_hi(float value) {
-  _internal_set_hi(value);
-  // @@protoc_insertion_point(field_set:monitor.proto.SoftIrq.hi)
-}
-
-// float timer = 3;
-inline void SoftIrq::clear_timer() {
-  timer_ = 0;
-}
-inline float SoftIrq::_internal_timer() const {
-  return timer_;
-}
-inline float SoftIrq::timer() const {
-  // @@protoc_insertion_point(field_get:monitor.proto.SoftIrq.timer)
-  return _internal_timer();
-}
-inline void SoftIrq::_internal_set_timer(float value) {
-  
-  timer_ = value;
-}
-inline void SoftIrq::set_timer(float value) {
-  _internal_set_timer(value);
-  // @@protoc_insertion_point(field_set:monitor.proto.SoftIrq.timer)
-}
-
-// float net_tx = 4;
-inline void SoftIrq::clear_net_tx() {
-  net_tx_ = 0;
-}
-inline float SoftIrq::_internal_net_tx() const {
-  return net_tx_;
-}
-inline float SoftIrq::net_tx() const {
-  // @@protoc_insertion_point(field_get:monitor.proto.SoftIrq.net_tx)
-  return _internal_net_tx();
-}
-inline void SoftIrq::_internal_set_net_tx(float value) {
-  
-  net_tx_ = value;
-}
-inline void SoftIrq::set_net_tx(float value) {
-  _internal_set_net_tx(value);
-  // @@protoc_insertion_point(field_set:monitor.proto.SoftIrq.net_tx)
-}
-
-// float net_rx = 5;
-inline void SoftIrq::clear_net_rx() {
-  net_rx_ = 0;
-}
-inline float SoftIrq::_internal_net_rx() const {
-  return net_rx_;
-}
-inline float SoftIrq::net_rx() const {
-  // @@protoc_insertion_point(field_get:monitor.proto.SoftIrq.net_rx)
-  return _internal_net_rx();
-}
-inline void SoftIrq::_internal_set_net_rx(float value) {
-  
-  net_rx_ = value;
-}
-inline void SoftIrq::set_net_rx(float value) {
-  _internal_set_net_rx(value);
-  // @@protoc_insertion_point(field_set:monitor.proto.SoftIrq.net_rx)
-}
-
-// float block = 6;
-inline void SoftIrq::clear_block() {
-  block_ = 0;
-}
-inline float SoftIrq::_internal_block() const {
-  return block_;
-}
-inline float SoftIrq::block() const {
-  // @@protoc_insertion_point(field_get:monitor.proto.SoftIrq.block)
-  return _internal_block();
-}
-inline void SoftIrq::_internal_set_block(float value) {
-  
-  block_ = value;
-}
-inline void SoftIrq::set_block(float value) {
-  _internal_set_block(value);
-  // @@protoc_insertion_point(field_set:monitor.proto.SoftIrq.block)
-}
-
-// float irq_poll = 7;
-inline void SoftIrq::clear_irq_poll() {
-  irq_poll_ = 0;
-}
-inline float SoftIrq::_internal_irq_poll() const {
-  return irq_poll_;
-}
-inline float SoftIrq::irq_poll() const {
-  // @@protoc_insertion_point(field_get:monitor.proto.SoftIrq.irq_poll)
-  return _internal_irq_poll();
-}
-inline void SoftIrq::_internal_set_irq_poll(float value) {
-  
-  irq_poll_ = value;
-}
-inline void SoftIrq::set_irq_poll(float value) {
-  _internal_set_irq_poll(value);
-  // @@protoc_insertion_point(field_set:monitor.proto.SoftIrq.irq_poll)
-}
-
-// float tasklet = 8;
-inline void SoftIrq::clear_tasklet() {
-  tasklet_ = 0;
-}
-inline float SoftIrq::_internal_tasklet() const {
-  return tasklet_;
-}
-inline float SoftIrq::tasklet() const {
-  // @@protoc_insertion_point(field_get:monitor.proto.SoftIrq.tasklet)
-  return _internal_tasklet();
-}
-inline void SoftIrq::_internal_set_tasklet(float value) {
-  
-  tasklet_ = value;
-}
-inline void SoftIrq::set_tasklet(float value) {
-  _internal_set_tasklet(value);
-  // @@protoc_insertion_point(field_set:monitor.proto.SoftIrq.tasklet)
-}
-
-// float sched = 9;
-inline void SoftIrq::clear_sched() {
-  sched_ = 0;
-}
-inline float SoftIrq::_internal_sched() const {
-  return sched_;
-}
-inline float SoftIrq::sched() const {
-  // @@protoc_insertion_point(field_get:monitor.proto.SoftIrq.sched)
-  return _internal_sched();
-}
-inline void SoftIrq::_internal_set_sched(float value) {
-  
-  sched_ = value;
-}
-inline void SoftIrq::set_sched(float value) {
-  _internal_set_sched(value);
-  // @@protoc_insertion_point(field_set:monitor.proto.SoftIrq.sched)
-}
-
-// float hrtimer = 10;
-inline void SoftIrq::clear_hrtimer() {
-  hrtimer_ = 0;
-}
-inline float SoftIrq::_internal_hrtimer() const {
-  return hrtimer_;
-}
-inline float SoftIrq::hrtimer() const {
-  // @@protoc_insertion_point(field_get:monitor.proto.SoftIrq.hrtimer)
-  return _internal_hrtimer();
-}
-inline void SoftIrq::_internal_set_hrtimer(float value) {
-  
-  hrtimer_ = value;
-}
-inline void SoftIrq::set_hrtimer(float value) {
-  _internal_set_hrtimer(value);
-  // @@protoc_insertion_point(field_set:monitor.proto.SoftIrq.hrtimer)
-}
-
-// float rcu = 11;
-inline void SoftIrq::clear_rcu() {
-  rcu_ = 0;
-}
-inline float SoftIrq::_internal_rcu() const {
-  return rcu_;
-}
-inline float SoftIrq::rcu() const {
-  // @@protoc_insertion_point(field_get:monitor.proto.SoftIrq.rcu)
-  return _internal_rcu();
-}
-inline void SoftIrq::_internal_set_rcu(float value) {
-  
-  rcu_ = value;
-}
-inline void SoftIrq::set_rcu(float value) {
-  _internal_set_rcu(value);
-  // @@protoc_insertion_point(field_set:monitor.proto.SoftIrq.rcu)
-}
-
-// -------------------------------------------------------------------
-
-// CpuLoad
-
-// float load_avg_1 = 1;
-inline void CpuLoad::clear_load_avg_1() {
-  load_avg_1_ = 0;
-}
-inline float CpuLoad::_internal_load_avg_1() const {
-  return load_avg_1_;
-}
-inline float CpuLoad::load_avg_1() const {
-  // @@protoc_insertion_point(field_get:monitor.proto.CpuLoad.load_avg_1)
-  return _internal_load_avg_1();
-}
-inline void CpuLoad::_internal_set_load_avg_1(float value) {
-  
-  load_avg_1_ = value;
-}
-inline void CpuLoad::set_load_avg_1(float value) {
-  _internal_set_load_avg_1(value);
-  // @@protoc_insertion_point(field_set:monitor.proto.CpuLoad.load_avg_1)
-}
-
-// float load_avg_3 = 2;
-inline void CpuLoad::clear_load_avg_3() {
-  load_avg_3_ = 0;
-}
-inline float CpuLoad::_internal_load_avg_3() const {
-  return load_avg_3_;
-}
-inline float CpuLoad::load_avg_3() const {
-  // @@protoc_insertion_point(field_get:monitor.proto.CpuLoad.load_avg_3)
-  return _internal_load_avg_3();
-}
-inline void CpuLoad::_internal_set_load_avg_3(float value) {
-  
-  load_avg_3_ = value;
-}
-inline void CpuLoad::set_load_avg_3(float value) {
-  _internal_set_load_avg_3(value);
-  // @@protoc_insertion_point(field_set:monitor.proto.CpuLoad.load_avg_3)
-}
-
-// float load_avg_15 = 3;
-inline void CpuLoad::clear_load_avg_15() {
-  load_avg_15_ = 0;
-}
-inline float CpuLoad::_internal_load_avg_15() const {
-  return load_avg_15_;
-}
-inline float CpuLoad::load_avg_15() const {
-  // @@protoc_insertion_point(field_get:monitor.proto.CpuLoad.load_avg_15)
-  return _internal_load_avg_15();
-}
-inline void CpuLoad::_internal_set_load_avg_15(float value) {
-  
-  load_avg_15_ = value;
-}
-inline void CpuLoad::set_load_avg_15(float value) {
-  _internal_set_load_avg_15(value);
-  // @@protoc_insertion_point(field_set:monitor.proto.CpuLoad.load_avg_15)
-}
-
-// -------------------------------------------------------------------
-
-// CpuStat
-
-// string cpu_name = 1;
-inline void CpuStat::clear_cpu_name() {
-  cpu_name_.ClearToEmpty();
-}
-inline const std::string& CpuStat::cpu_name() const {
-  // @@protoc_insertion_point(field_get:monitor.proto.CpuStat.cpu_name)
-  return _internal_cpu_name();
-}
-inline void CpuStat::set_cpu_name(const std::string& value) {
-  _internal_set_cpu_name(value);
-  // @@protoc_insertion_point(field_set:monitor.proto.CpuStat.cpu_name)
-}
-inline std::string* CpuStat::mutable_cpu_name() {
-  // @@protoc_insertion_point(field_mutable:monitor.proto.CpuStat.cpu_name)
-  return _internal_mutable_cpu_name();
-}
-inline const std::string& CpuStat::_internal_cpu_name() const {
-  return cpu_name_.Get();
-}
-inline void CpuStat::_internal_set_cpu_name(const std::string& value) {
-  
-  cpu_name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArena());
-}
-inline void CpuStat::set_cpu_name(std::string&& value) {
-  
-  cpu_name_.Set(
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:monitor.proto.CpuStat.cpu_name)
-}
-inline void CpuStat::set_cpu_name(const char* value) {
-  GOOGLE_DCHECK(value != nullptr);
-  
-  cpu_name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(value), GetArena());
-  // @@protoc_insertion_point(field_set_char:monitor.proto.CpuStat.cpu_name)
-}
-inline void CpuStat::set_cpu_name(const char* value,
-    size_t size) {
-  
-  cpu_name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(
-      reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:monitor.proto.CpuStat.cpu_name)
-}
-inline std::string* CpuStat::_internal_mutable_cpu_name() {
-  
-  return cpu_name_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArena());
-}
-inline std::string* CpuStat::release_cpu_name() {
-  // @@protoc_insertion_point(field_release:monitor.proto.CpuStat.cpu_name)
-  return cpu_name_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-}
-inline void CpuStat::set_allocated_cpu_name(std::string* cpu_name) {
-  if (cpu_name != nullptr) {
-    
-  } else {
-    
-  }
-  cpu_name_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), cpu_name,
-      GetArena());
-  // @@protoc_insertion_point(field_set_allocated:monitor.proto.CpuStat.cpu_name)
-}
-
-// float cpu_percent = 2;
-inline void CpuStat::clear_cpu_percent() {
-  cpu_percent_ = 0;
-}
-inline float CpuStat::_internal_cpu_percent() const {
-  return cpu_percent_;
-}
-inline float CpuStat::cpu_percent() const {
-  // @@protoc_insertion_point(field_get:monitor.proto.CpuStat.cpu_percent)
-  return _internal_cpu_percent();
-}
-inline void CpuStat::_internal_set_cpu_percent(float value) {
-  
-  cpu_percent_ = value;
-}
-inline void CpuStat::set_cpu_percent(float value) {
-  _internal_set_cpu_percent(value);
-  // @@protoc_insertion_point(field_set:monitor.proto.CpuStat.cpu_percent)
-}
-
-// float usr_percent = 3;
-inline void CpuStat::clear_usr_percent() {
-  usr_percent_ = 0;
-}
-inline float CpuStat::_internal_usr_percent() const {
-  return usr_percent_;
-}
-inline float CpuStat::usr_percent() const {
-  // @@protoc_insertion_point(field_get:monitor.proto.CpuStat.usr_percent)
-  return _internal_usr_percent();
-}
-inline void CpuStat::_internal_set_usr_percent(float value) {
-  
-  usr_percent_ = value;
-}
-inline void CpuStat::set_usr_percent(float value) {
-  _internal_set_usr_percent(value);
-  // @@protoc_insertion_point(field_set:monitor.proto.CpuStat.usr_percent)
-}
-
-// float system_percent = 4;
-inline void CpuStat::clear_system_percent() {
-  system_percent_ = 0;
-}
-inline float CpuStat::_internal_system_percent() const {
-  return system_percent_;
-}
-inline float CpuStat::system_percent() const {
-  // @@protoc_insertion_point(field_get:monitor.proto.CpuStat.system_percent)
-  return _internal_system_percent();
-}
-inline void CpuStat::_internal_set_system_percent(float value) {
-  
-  system_percent_ = value;
-}
-inline void CpuStat::set_system_percent(float value) {
-  _internal_set_system_percent(value);
-  // @@protoc_insertion_point(field_set:monitor.proto.CpuStat.system_percent)
-}
-
-// -------------------------------------------------------------------
-
 // MonitorInfo
+
+// string name = 1;
+inline void MonitorInfo::clear_name() {
+  name_.ClearToEmpty();
+}
+inline const std::string& MonitorInfo::name() const {
+  // @@protoc_insertion_point(field_get:monitor.proto.MonitorInfo.name)
+  return _internal_name();
+}
+inline void MonitorInfo::set_name(const std::string& value) {
+  _internal_set_name(value);
+  // @@protoc_insertion_point(field_set:monitor.proto.MonitorInfo.name)
+}
+inline std::string* MonitorInfo::mutable_name() {
+  // @@protoc_insertion_point(field_mutable:monitor.proto.MonitorInfo.name)
+  return _internal_mutable_name();
+}
+inline const std::string& MonitorInfo::_internal_name() const {
+  return name_.Get();
+}
+inline void MonitorInfo::_internal_set_name(const std::string& value) {
+  
+  name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArena());
+}
+inline void MonitorInfo::set_name(std::string&& value) {
+  
+  name_.Set(
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:monitor.proto.MonitorInfo.name)
+}
+inline void MonitorInfo::set_name(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(value), GetArena());
+  // @@protoc_insertion_point(field_set_char:monitor.proto.MonitorInfo.name)
+}
+inline void MonitorInfo::set_name(const char* value,
+    size_t size) {
+  
+  name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:monitor.proto.MonitorInfo.name)
+}
+inline std::string* MonitorInfo::_internal_mutable_name() {
+  
+  return name_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArena());
+}
+inline std::string* MonitorInfo::release_name() {
+  // @@protoc_insertion_point(field_release:monitor.proto.MonitorInfo.name)
+  return name_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void MonitorInfo::set_allocated_name(std::string* name) {
+  if (name != nullptr) {
+    
+  } else {
+    
+  }
+  name_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), name,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:monitor.proto.MonitorInfo.name)
+}
 
 // repeated .monitor.proto.SoftIrq soft_irq = 4;
 inline int MonitorInfo::_internal_soft_irq_size() const {
@@ -1322,9 +393,6 @@ inline int MonitorInfo::_internal_soft_irq_size() const {
 }
 inline int MonitorInfo::soft_irq_size() const {
   return _internal_soft_irq_size();
-}
-inline void MonitorInfo::clear_soft_irq() {
-  soft_irq_.Clear();
 }
 inline ::monitor::proto::SoftIrq* MonitorInfo::mutable_soft_irq(int index) {
   // @@protoc_insertion_point(field_mutable:monitor.proto.MonitorInfo.soft_irq)
@@ -1361,12 +429,6 @@ inline bool MonitorInfo::_internal_has_cpu_load() const {
 }
 inline bool MonitorInfo::has_cpu_load() const {
   return _internal_has_cpu_load();
-}
-inline void MonitorInfo::clear_cpu_load() {
-  if (GetArena() == nullptr && cpu_load_ != nullptr) {
-    delete cpu_load_;
-  }
-  cpu_load_ = nullptr;
 }
 inline const ::monitor::proto::CpuLoad& MonitorInfo::_internal_cpu_load() const {
   const ::monitor::proto::CpuLoad* p = cpu_load_;
@@ -1421,11 +483,11 @@ inline ::monitor::proto::CpuLoad* MonitorInfo::mutable_cpu_load() {
 inline void MonitorInfo::set_allocated_cpu_load(::monitor::proto::CpuLoad* cpu_load) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
   if (message_arena == nullptr) {
-    delete cpu_load_;
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(cpu_load_);
   }
   if (cpu_load) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-      ::PROTOBUF_NAMESPACE_ID::Arena::GetArena(cpu_load);
+      reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(cpu_load)->GetArena();
     if (message_arena != submessage_arena) {
       cpu_load = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, cpu_load, submessage_arena);
@@ -1444,9 +506,6 @@ inline int MonitorInfo::_internal_cpu_stat_size() const {
 }
 inline int MonitorInfo::cpu_stat_size() const {
   return _internal_cpu_stat_size();
-}
-inline void MonitorInfo::clear_cpu_stat() {
-  cpu_stat_.Clear();
 }
 inline ::monitor::proto::CpuStat* MonitorInfo::mutable_cpu_stat(int index) {
   // @@protoc_insertion_point(field_mutable:monitor.proto.MonitorInfo.cpu_stat)
@@ -1477,15 +536,122 @@ MonitorInfo::cpu_stat() const {
   return cpu_stat_;
 }
 
+// .monitor.proto.MemInfo mem_info = 7;
+inline bool MonitorInfo::_internal_has_mem_info() const {
+  return this != internal_default_instance() && mem_info_ != nullptr;
+}
+inline bool MonitorInfo::has_mem_info() const {
+  return _internal_has_mem_info();
+}
+inline const ::monitor::proto::MemInfo& MonitorInfo::_internal_mem_info() const {
+  const ::monitor::proto::MemInfo* p = mem_info_;
+  return p != nullptr ? *p : reinterpret_cast<const ::monitor::proto::MemInfo&>(
+      ::monitor::proto::_MemInfo_default_instance_);
+}
+inline const ::monitor::proto::MemInfo& MonitorInfo::mem_info() const {
+  // @@protoc_insertion_point(field_get:monitor.proto.MonitorInfo.mem_info)
+  return _internal_mem_info();
+}
+inline void MonitorInfo::unsafe_arena_set_allocated_mem_info(
+    ::monitor::proto::MemInfo* mem_info) {
+  if (GetArena() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(mem_info_);
+  }
+  mem_info_ = mem_info;
+  if (mem_info) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:monitor.proto.MonitorInfo.mem_info)
+}
+inline ::monitor::proto::MemInfo* MonitorInfo::release_mem_info() {
+  
+  ::monitor::proto::MemInfo* temp = mem_info_;
+  mem_info_ = nullptr;
+  if (GetArena() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+  return temp;
+}
+inline ::monitor::proto::MemInfo* MonitorInfo::unsafe_arena_release_mem_info() {
+  // @@protoc_insertion_point(field_release:monitor.proto.MonitorInfo.mem_info)
+  
+  ::monitor::proto::MemInfo* temp = mem_info_;
+  mem_info_ = nullptr;
+  return temp;
+}
+inline ::monitor::proto::MemInfo* MonitorInfo::_internal_mutable_mem_info() {
+  
+  if (mem_info_ == nullptr) {
+    auto* p = CreateMaybeMessage<::monitor::proto::MemInfo>(GetArena());
+    mem_info_ = p;
+  }
+  return mem_info_;
+}
+inline ::monitor::proto::MemInfo* MonitorInfo::mutable_mem_info() {
+  // @@protoc_insertion_point(field_mutable:monitor.proto.MonitorInfo.mem_info)
+  return _internal_mutable_mem_info();
+}
+inline void MonitorInfo::set_allocated_mem_info(::monitor::proto::MemInfo* mem_info) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
+  if (message_arena == nullptr) {
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(mem_info_);
+  }
+  if (mem_info) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+      reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(mem_info)->GetArena();
+    if (message_arena != submessage_arena) {
+      mem_info = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, mem_info, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  mem_info_ = mem_info;
+  // @@protoc_insertion_point(field_set_allocated:monitor.proto.MonitorInfo.mem_info)
+}
+
+// repeated .monitor.proto.NetInfo net_info = 8;
+inline int MonitorInfo::_internal_net_info_size() const {
+  return net_info_.size();
+}
+inline int MonitorInfo::net_info_size() const {
+  return _internal_net_info_size();
+}
+inline ::monitor::proto::NetInfo* MonitorInfo::mutable_net_info(int index) {
+  // @@protoc_insertion_point(field_mutable:monitor.proto.MonitorInfo.net_info)
+  return net_info_.Mutable(index);
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::monitor::proto::NetInfo >*
+MonitorInfo::mutable_net_info() {
+  // @@protoc_insertion_point(field_mutable_list:monitor.proto.MonitorInfo.net_info)
+  return &net_info_;
+}
+inline const ::monitor::proto::NetInfo& MonitorInfo::_internal_net_info(int index) const {
+  return net_info_.Get(index);
+}
+inline const ::monitor::proto::NetInfo& MonitorInfo::net_info(int index) const {
+  // @@protoc_insertion_point(field_get:monitor.proto.MonitorInfo.net_info)
+  return _internal_net_info(index);
+}
+inline ::monitor::proto::NetInfo* MonitorInfo::_internal_add_net_info() {
+  return net_info_.Add();
+}
+inline ::monitor::proto::NetInfo* MonitorInfo::add_net_info() {
+  // @@protoc_insertion_point(field_add:monitor.proto.MonitorInfo.net_info)
+  return _internal_add_net_info();
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::monitor::proto::NetInfo >&
+MonitorInfo::net_info() const {
+  // @@protoc_insertion_point(field_list:monitor.proto.MonitorInfo.net_info)
+  return net_info_;
+}
+
 #ifdef __GNUC__
   #pragma GCC diagnostic pop
 #endif  // __GNUC__
-// -------------------------------------------------------------------
-
-// -------------------------------------------------------------------
-
-// -------------------------------------------------------------------
-
 
 // @@protoc_insertion_point(namespace_scope)
 

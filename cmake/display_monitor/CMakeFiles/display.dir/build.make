@@ -111,19 +111,19 @@ display_monitor/CMakeFiles/display.dir/monitor_inter.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/display.dir/monitor_inter.cpp.s"
 	cd /work/cmake/display_monitor && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /work/display_monitor/monitor_inter.cpp -o CMakeFiles/display.dir/monitor_inter.cpp.s
 
-display_monitor/CMakeFiles/display.dir/monitor_model.cpp.o: display_monitor/CMakeFiles/display.dir/flags.make
-display_monitor/CMakeFiles/display.dir/monitor_model.cpp.o: /work/display_monitor/monitor_model.cpp
-display_monitor/CMakeFiles/display.dir/monitor_model.cpp.o: display_monitor/CMakeFiles/display.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/work/cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object display_monitor/CMakeFiles/display.dir/monitor_model.cpp.o"
-	cd /work/cmake/display_monitor && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT display_monitor/CMakeFiles/display.dir/monitor_model.cpp.o -MF CMakeFiles/display.dir/monitor_model.cpp.o.d -o CMakeFiles/display.dir/monitor_model.cpp.o -c /work/display_monitor/monitor_model.cpp
+display_monitor/CMakeFiles/display.dir/cpu_softirq_model.cpp.o: display_monitor/CMakeFiles/display.dir/flags.make
+display_monitor/CMakeFiles/display.dir/cpu_softirq_model.cpp.o: /work/display_monitor/cpu_softirq_model.cpp
+display_monitor/CMakeFiles/display.dir/cpu_softirq_model.cpp.o: display_monitor/CMakeFiles/display.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/work/cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object display_monitor/CMakeFiles/display.dir/cpu_softirq_model.cpp.o"
+	cd /work/cmake/display_monitor && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT display_monitor/CMakeFiles/display.dir/cpu_softirq_model.cpp.o -MF CMakeFiles/display.dir/cpu_softirq_model.cpp.o.d -o CMakeFiles/display.dir/cpu_softirq_model.cpp.o -c /work/display_monitor/cpu_softirq_model.cpp
 
-display_monitor/CMakeFiles/display.dir/monitor_model.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/display.dir/monitor_model.cpp.i"
-	cd /work/cmake/display_monitor && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /work/display_monitor/monitor_model.cpp > CMakeFiles/display.dir/monitor_model.cpp.i
+display_monitor/CMakeFiles/display.dir/cpu_softirq_model.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/display.dir/cpu_softirq_model.cpp.i"
+	cd /work/cmake/display_monitor && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /work/display_monitor/cpu_softirq_model.cpp > CMakeFiles/display.dir/cpu_softirq_model.cpp.i
 
-display_monitor/CMakeFiles/display.dir/monitor_model.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/display.dir/monitor_model.cpp.s"
-	cd /work/cmake/display_monitor && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /work/display_monitor/monitor_model.cpp -o CMakeFiles/display.dir/monitor_model.cpp.s
+display_monitor/CMakeFiles/display.dir/cpu_softirq_model.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/display.dir/cpu_softirq_model.cpp.s"
+	cd /work/cmake/display_monitor && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /work/display_monitor/cpu_softirq_model.cpp -o CMakeFiles/display.dir/cpu_softirq_model.cpp.s
 
 display_monitor/CMakeFiles/display.dir/cpu_load_model.cpp.o: display_monitor/CMakeFiles/display.dir/flags.make
 display_monitor/CMakeFiles/display.dir/cpu_load_model.cpp.o: /work/display_monitor/cpu_load_model.cpp
@@ -167,15 +167,45 @@ display_monitor/CMakeFiles/display.dir/cpu_stat_model.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/display.dir/cpu_stat_model.cpp.s"
 	cd /work/cmake/display_monitor && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /work/display_monitor/cpu_stat_model.cpp -o CMakeFiles/display.dir/cpu_stat_model.cpp.s
 
+display_monitor/CMakeFiles/display.dir/mem_model.cpp.o: display_monitor/CMakeFiles/display.dir/flags.make
+display_monitor/CMakeFiles/display.dir/mem_model.cpp.o: /work/display_monitor/mem_model.cpp
+display_monitor/CMakeFiles/display.dir/mem_model.cpp.o: display_monitor/CMakeFiles/display.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/work/cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object display_monitor/CMakeFiles/display.dir/mem_model.cpp.o"
+	cd /work/cmake/display_monitor && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT display_monitor/CMakeFiles/display.dir/mem_model.cpp.o -MF CMakeFiles/display.dir/mem_model.cpp.o.d -o CMakeFiles/display.dir/mem_model.cpp.o -c /work/display_monitor/mem_model.cpp
+
+display_monitor/CMakeFiles/display.dir/mem_model.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/display.dir/mem_model.cpp.i"
+	cd /work/cmake/display_monitor && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /work/display_monitor/mem_model.cpp > CMakeFiles/display.dir/mem_model.cpp.i
+
+display_monitor/CMakeFiles/display.dir/mem_model.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/display.dir/mem_model.cpp.s"
+	cd /work/cmake/display_monitor && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /work/display_monitor/mem_model.cpp -o CMakeFiles/display.dir/mem_model.cpp.s
+
+display_monitor/CMakeFiles/display.dir/net_model.cpp.o: display_monitor/CMakeFiles/display.dir/flags.make
+display_monitor/CMakeFiles/display.dir/net_model.cpp.o: /work/display_monitor/net_model.cpp
+display_monitor/CMakeFiles/display.dir/net_model.cpp.o: display_monitor/CMakeFiles/display.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/work/cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object display_monitor/CMakeFiles/display.dir/net_model.cpp.o"
+	cd /work/cmake/display_monitor && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT display_monitor/CMakeFiles/display.dir/net_model.cpp.o -MF CMakeFiles/display.dir/net_model.cpp.o.d -o CMakeFiles/display.dir/net_model.cpp.o -c /work/display_monitor/net_model.cpp
+
+display_monitor/CMakeFiles/display.dir/net_model.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/display.dir/net_model.cpp.i"
+	cd /work/cmake/display_monitor && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /work/display_monitor/net_model.cpp > CMakeFiles/display.dir/net_model.cpp.i
+
+display_monitor/CMakeFiles/display.dir/net_model.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/display.dir/net_model.cpp.s"
+	cd /work/cmake/display_monitor && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /work/display_monitor/net_model.cpp -o CMakeFiles/display.dir/net_model.cpp.s
+
 # Object files for target display
 display_OBJECTS = \
 "CMakeFiles/display.dir/display_autogen/mocs_compilation.cpp.o" \
 "CMakeFiles/display.dir/main.cpp.o" \
 "CMakeFiles/display.dir/monitor_inter.cpp.o" \
-"CMakeFiles/display.dir/monitor_model.cpp.o" \
+"CMakeFiles/display.dir/cpu_softirq_model.cpp.o" \
 "CMakeFiles/display.dir/cpu_load_model.cpp.o" \
 "CMakeFiles/display.dir/monitor_widget.cpp.o" \
-"CMakeFiles/display.dir/cpu_stat_model.cpp.o"
+"CMakeFiles/display.dir/cpu_stat_model.cpp.o" \
+"CMakeFiles/display.dir/mem_model.cpp.o" \
+"CMakeFiles/display.dir/net_model.cpp.o"
 
 # External object files for target display
 display_EXTERNAL_OBJECTS =
@@ -183,10 +213,12 @@ display_EXTERNAL_OBJECTS =
 display_monitor/display: display_monitor/CMakeFiles/display.dir/display_autogen/mocs_compilation.cpp.o
 display_monitor/display: display_monitor/CMakeFiles/display.dir/main.cpp.o
 display_monitor/display: display_monitor/CMakeFiles/display.dir/monitor_inter.cpp.o
-display_monitor/display: display_monitor/CMakeFiles/display.dir/monitor_model.cpp.o
+display_monitor/display: display_monitor/CMakeFiles/display.dir/cpu_softirq_model.cpp.o
 display_monitor/display: display_monitor/CMakeFiles/display.dir/cpu_load_model.cpp.o
 display_monitor/display: display_monitor/CMakeFiles/display.dir/monitor_widget.cpp.o
 display_monitor/display: display_monitor/CMakeFiles/display.dir/cpu_stat_model.cpp.o
+display_monitor/display: display_monitor/CMakeFiles/display.dir/mem_model.cpp.o
+display_monitor/display: display_monitor/CMakeFiles/display.dir/net_model.cpp.o
 display_monitor/display: display_monitor/CMakeFiles/display.dir/build.make
 display_monitor/display: rpc_manager/client/libclient.a
 display_monitor/display: proto/libmonitor_proto.a
@@ -218,7 +250,7 @@ display_monitor/display: /usr/local/lib/libabsl_log_severity.so
 display_monitor/display: /usr/local/qt5/lib/libQt5Gui.so.5.12.9
 display_monitor/display: /usr/local/qt5/lib/libQt5Core.so.5.12.9
 display_monitor/display: display_monitor/CMakeFiles/display.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/work/cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable display"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/work/cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable display"
 	cd /work/cmake/display_monitor && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/display.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

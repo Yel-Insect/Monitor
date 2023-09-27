@@ -259,6 +259,9 @@ rpc_manager/server/CMakeFiles/server.dir/rpc_manager.cpp.o: \
  /usr/local/include/google/protobuf/message.h \
  /usr/local/include/google/protobuf/extension_set.h \
  /usr/include/c++/7/cassert /usr/local/include/google/protobuf/empty.pb.h \
+ /work/cmake/proto/net_info.pb.h /work/cmake/proto/mem_info.pb.h \
+ /work/cmake/proto/cpu_stat.pb.h /work/cmake/proto/cpu_softirq.pb.h \
+ /work/cmake/proto/cpu_load.pb.h \
  /usr/local/include/grpc/impl/codegen/port_platform.h \
  /usr/include/linux/version.h \
  /usr/local/include/grpcpp/impl/codegen/async_generic_service.h \

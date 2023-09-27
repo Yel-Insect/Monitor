@@ -40,6 +40,7 @@ QWidget *MonitorWidget::InitButtonMenu(const std::string& name) {
   QWidget *widget = new QWidget();
   widget->setLayout(layout);
 
+  // QObject::connect no such slot
   connect(cpu_button, SIGNAL(clicked()), this, SLOT(ClickCpuButton()));
   connect(soft_irq_button, SIGNAL(clicked()), this, SLOT(ClickSoftIrqButton()));
   connect(mem_button, SIGNAL(clicked()), this, SLOT(ClickMemButton()));
@@ -60,6 +61,7 @@ QWidget *MonitorWidget::InitCpuMonitorWidget() {
   cpu_load_monitor_view_->setModel(cpu_load_model_);
   cpu_load_monitor_view_->show();
 
+  // 标签有误
   QLabel *cpu_stat_label = new QLabel(this);
   cpu_load_label->setText(tr("Monitor CpuStat:"));
   cpu_load_label->setFont(QFont("Microsoft YaHei", 10, 40));
@@ -71,6 +73,7 @@ QWidget *MonitorWidget::InitCpuMonitorWidget() {
 
   QGridLayout *layout = new QGridLayout();
 
+  // 布局需要修改
   layout->addWidget(cpu_load_label, 3, 0);
   layout->addWidget(cpu_load_monitor_view_, 4, 0, 2, 2);
 

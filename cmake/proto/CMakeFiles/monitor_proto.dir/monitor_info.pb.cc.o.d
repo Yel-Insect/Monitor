@@ -252,5 +252,8 @@ proto/CMakeFiles/monitor_proto.dir/monitor_info.pb.cc.o: \
  /usr/local/include/google/protobuf/message.h \
  /usr/local/include/google/protobuf/extension_set.h \
  /usr/include/c++/7/cassert /usr/local/include/google/protobuf/empty.pb.h \
+ /work/cmake/proto/net_info.pb.h /work/cmake/proto/mem_info.pb.h \
+ /work/cmake/proto/cpu_stat.pb.h /work/cmake/proto/cpu_softirq.pb.h \
+ /work/cmake/proto/cpu_load.pb.h \
  /usr/local/include/google/protobuf/reflection_ops.h \
  /usr/local/include/google/protobuf/wire_format.h

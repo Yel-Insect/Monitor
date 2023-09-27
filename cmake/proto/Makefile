@@ -130,6 +130,198 @@ monitor_proto/fast:
 	cd /work/cmake && $(MAKE) $(MAKESILENT) -f proto/CMakeFiles/monitor_proto.dir/build.make proto/CMakeFiles/monitor_proto.dir/build
 .PHONY : monitor_proto/fast
 
+cpu_load.grpc.pb.o: cpu_load.grpc.pb.cc.o
+.PHONY : cpu_load.grpc.pb.o
+
+# target to build an object file
+cpu_load.grpc.pb.cc.o:
+	cd /work/cmake && $(MAKE) $(MAKESILENT) -f proto/CMakeFiles/monitor_proto.dir/build.make proto/CMakeFiles/monitor_proto.dir/cpu_load.grpc.pb.cc.o
+.PHONY : cpu_load.grpc.pb.cc.o
+
+cpu_load.grpc.pb.i: cpu_load.grpc.pb.cc.i
+.PHONY : cpu_load.grpc.pb.i
+
+# target to preprocess a source file
+cpu_load.grpc.pb.cc.i:
+	cd /work/cmake && $(MAKE) $(MAKESILENT) -f proto/CMakeFiles/monitor_proto.dir/build.make proto/CMakeFiles/monitor_proto.dir/cpu_load.grpc.pb.cc.i
+.PHONY : cpu_load.grpc.pb.cc.i
+
+cpu_load.grpc.pb.s: cpu_load.grpc.pb.cc.s
+.PHONY : cpu_load.grpc.pb.s
+
+# target to generate assembly for a file
+cpu_load.grpc.pb.cc.s:
+	cd /work/cmake && $(MAKE) $(MAKESILENT) -f proto/CMakeFiles/monitor_proto.dir/build.make proto/CMakeFiles/monitor_proto.dir/cpu_load.grpc.pb.cc.s
+.PHONY : cpu_load.grpc.pb.cc.s
+
+cpu_load.pb.o: cpu_load.pb.cc.o
+.PHONY : cpu_load.pb.o
+
+# target to build an object file
+cpu_load.pb.cc.o:
+	cd /work/cmake && $(MAKE) $(MAKESILENT) -f proto/CMakeFiles/monitor_proto.dir/build.make proto/CMakeFiles/monitor_proto.dir/cpu_load.pb.cc.o
+.PHONY : cpu_load.pb.cc.o
+
+cpu_load.pb.i: cpu_load.pb.cc.i
+.PHONY : cpu_load.pb.i
+
+# target to preprocess a source file
+cpu_load.pb.cc.i:
+	cd /work/cmake && $(MAKE) $(MAKESILENT) -f proto/CMakeFiles/monitor_proto.dir/build.make proto/CMakeFiles/monitor_proto.dir/cpu_load.pb.cc.i
+.PHONY : cpu_load.pb.cc.i
+
+cpu_load.pb.s: cpu_load.pb.cc.s
+.PHONY : cpu_load.pb.s
+
+# target to generate assembly for a file
+cpu_load.pb.cc.s:
+	cd /work/cmake && $(MAKE) $(MAKESILENT) -f proto/CMakeFiles/monitor_proto.dir/build.make proto/CMakeFiles/monitor_proto.dir/cpu_load.pb.cc.s
+.PHONY : cpu_load.pb.cc.s
+
+cpu_softirq.grpc.pb.o: cpu_softirq.grpc.pb.cc.o
+.PHONY : cpu_softirq.grpc.pb.o
+
+# target to build an object file
+cpu_softirq.grpc.pb.cc.o:
+	cd /work/cmake && $(MAKE) $(MAKESILENT) -f proto/CMakeFiles/monitor_proto.dir/build.make proto/CMakeFiles/monitor_proto.dir/cpu_softirq.grpc.pb.cc.o
+.PHONY : cpu_softirq.grpc.pb.cc.o
+
+cpu_softirq.grpc.pb.i: cpu_softirq.grpc.pb.cc.i
+.PHONY : cpu_softirq.grpc.pb.i
+
+# target to preprocess a source file
+cpu_softirq.grpc.pb.cc.i:
+	cd /work/cmake && $(MAKE) $(MAKESILENT) -f proto/CMakeFiles/monitor_proto.dir/build.make proto/CMakeFiles/monitor_proto.dir/cpu_softirq.grpc.pb.cc.i
+.PHONY : cpu_softirq.grpc.pb.cc.i
+
+cpu_softirq.grpc.pb.s: cpu_softirq.grpc.pb.cc.s
+.PHONY : cpu_softirq.grpc.pb.s
+
+# target to generate assembly for a file
+cpu_softirq.grpc.pb.cc.s:
+	cd /work/cmake && $(MAKE) $(MAKESILENT) -f proto/CMakeFiles/monitor_proto.dir/build.make proto/CMakeFiles/monitor_proto.dir/cpu_softirq.grpc.pb.cc.s
+.PHONY : cpu_softirq.grpc.pb.cc.s
+
+cpu_softirq.pb.o: cpu_softirq.pb.cc.o
+.PHONY : cpu_softirq.pb.o
+
+# target to build an object file
+cpu_softirq.pb.cc.o:
+	cd /work/cmake && $(MAKE) $(MAKESILENT) -f proto/CMakeFiles/monitor_proto.dir/build.make proto/CMakeFiles/monitor_proto.dir/cpu_softirq.pb.cc.o
+.PHONY : cpu_softirq.pb.cc.o
+
+cpu_softirq.pb.i: cpu_softirq.pb.cc.i
+.PHONY : cpu_softirq.pb.i
+
+# target to preprocess a source file
+cpu_softirq.pb.cc.i:
+	cd /work/cmake && $(MAKE) $(MAKESILENT) -f proto/CMakeFiles/monitor_proto.dir/build.make proto/CMakeFiles/monitor_proto.dir/cpu_softirq.pb.cc.i
+.PHONY : cpu_softirq.pb.cc.i
+
+cpu_softirq.pb.s: cpu_softirq.pb.cc.s
+.PHONY : cpu_softirq.pb.s
+
+# target to generate assembly for a file
+cpu_softirq.pb.cc.s:
+	cd /work/cmake && $(MAKE) $(MAKESILENT) -f proto/CMakeFiles/monitor_proto.dir/build.make proto/CMakeFiles/monitor_proto.dir/cpu_softirq.pb.cc.s
+.PHONY : cpu_softirq.pb.cc.s
+
+cpu_stat.grpc.pb.o: cpu_stat.grpc.pb.cc.o
+.PHONY : cpu_stat.grpc.pb.o
+
+# target to build an object file
+cpu_stat.grpc.pb.cc.o:
+	cd /work/cmake && $(MAKE) $(MAKESILENT) -f proto/CMakeFiles/monitor_proto.dir/build.make proto/CMakeFiles/monitor_proto.dir/cpu_stat.grpc.pb.cc.o
+.PHONY : cpu_stat.grpc.pb.cc.o
+
+cpu_stat.grpc.pb.i: cpu_stat.grpc.pb.cc.i
+.PHONY : cpu_stat.grpc.pb.i
+
+# target to preprocess a source file
+cpu_stat.grpc.pb.cc.i:
+	cd /work/cmake && $(MAKE) $(MAKESILENT) -f proto/CMakeFiles/monitor_proto.dir/build.make proto/CMakeFiles/monitor_proto.dir/cpu_stat.grpc.pb.cc.i
+.PHONY : cpu_stat.grpc.pb.cc.i
+
+cpu_stat.grpc.pb.s: cpu_stat.grpc.pb.cc.s
+.PHONY : cpu_stat.grpc.pb.s
+
+# target to generate assembly for a file
+cpu_stat.grpc.pb.cc.s:
+	cd /work/cmake && $(MAKE) $(MAKESILENT) -f proto/CMakeFiles/monitor_proto.dir/build.make proto/CMakeFiles/monitor_proto.dir/cpu_stat.grpc.pb.cc.s
+.PHONY : cpu_stat.grpc.pb.cc.s
+
+cpu_stat.pb.o: cpu_stat.pb.cc.o
+.PHONY : cpu_stat.pb.o
+
+# target to build an object file
+cpu_stat.pb.cc.o:
+	cd /work/cmake && $(MAKE) $(MAKESILENT) -f proto/CMakeFiles/monitor_proto.dir/build.make proto/CMakeFiles/monitor_proto.dir/cpu_stat.pb.cc.o
+.PHONY : cpu_stat.pb.cc.o
+
+cpu_stat.pb.i: cpu_stat.pb.cc.i
+.PHONY : cpu_stat.pb.i
+
+# target to preprocess a source file
+cpu_stat.pb.cc.i:
+	cd /work/cmake && $(MAKE) $(MAKESILENT) -f proto/CMakeFiles/monitor_proto.dir/build.make proto/CMakeFiles/monitor_proto.dir/cpu_stat.pb.cc.i
+.PHONY : cpu_stat.pb.cc.i
+
+cpu_stat.pb.s: cpu_stat.pb.cc.s
+.PHONY : cpu_stat.pb.s
+
+# target to generate assembly for a file
+cpu_stat.pb.cc.s:
+	cd /work/cmake && $(MAKE) $(MAKESILENT) -f proto/CMakeFiles/monitor_proto.dir/build.make proto/CMakeFiles/monitor_proto.dir/cpu_stat.pb.cc.s
+.PHONY : cpu_stat.pb.cc.s
+
+mem_info.grpc.pb.o: mem_info.grpc.pb.cc.o
+.PHONY : mem_info.grpc.pb.o
+
+# target to build an object file
+mem_info.grpc.pb.cc.o:
+	cd /work/cmake && $(MAKE) $(MAKESILENT) -f proto/CMakeFiles/monitor_proto.dir/build.make proto/CMakeFiles/monitor_proto.dir/mem_info.grpc.pb.cc.o
+.PHONY : mem_info.grpc.pb.cc.o
+
+mem_info.grpc.pb.i: mem_info.grpc.pb.cc.i
+.PHONY : mem_info.grpc.pb.i
+
+# target to preprocess a source file
+mem_info.grpc.pb.cc.i:
+	cd /work/cmake && $(MAKE) $(MAKESILENT) -f proto/CMakeFiles/monitor_proto.dir/build.make proto/CMakeFiles/monitor_proto.dir/mem_info.grpc.pb.cc.i
+.PHONY : mem_info.grpc.pb.cc.i
+
+mem_info.grpc.pb.s: mem_info.grpc.pb.cc.s
+.PHONY : mem_info.grpc.pb.s
+
+# target to generate assembly for a file
+mem_info.grpc.pb.cc.s:
+	cd /work/cmake && $(MAKE) $(MAKESILENT) -f proto/CMakeFiles/monitor_proto.dir/build.make proto/CMakeFiles/monitor_proto.dir/mem_info.grpc.pb.cc.s
+.PHONY : mem_info.grpc.pb.cc.s
+
+mem_info.pb.o: mem_info.pb.cc.o
+.PHONY : mem_info.pb.o
+
+# target to build an object file
+mem_info.pb.cc.o:
+	cd /work/cmake && $(MAKE) $(MAKESILENT) -f proto/CMakeFiles/monitor_proto.dir/build.make proto/CMakeFiles/monitor_proto.dir/mem_info.pb.cc.o
+.PHONY : mem_info.pb.cc.o
+
+mem_info.pb.i: mem_info.pb.cc.i
+.PHONY : mem_info.pb.i
+
+# target to preprocess a source file
+mem_info.pb.cc.i:
+	cd /work/cmake && $(MAKE) $(MAKESILENT) -f proto/CMakeFiles/monitor_proto.dir/build.make proto/CMakeFiles/monitor_proto.dir/mem_info.pb.cc.i
+.PHONY : mem_info.pb.cc.i
+
+mem_info.pb.s: mem_info.pb.cc.s
+.PHONY : mem_info.pb.s
+
+# target to generate assembly for a file
+mem_info.pb.cc.s:
+	cd /work/cmake && $(MAKE) $(MAKESILENT) -f proto/CMakeFiles/monitor_proto.dir/build.make proto/CMakeFiles/monitor_proto.dir/mem_info.pb.cc.s
+.PHONY : mem_info.pb.cc.s
+
 monitor_info.grpc.pb.o: monitor_info.grpc.pb.cc.o
 .PHONY : monitor_info.grpc.pb.o
 
@@ -178,6 +370,54 @@ monitor_info.pb.cc.s:
 	cd /work/cmake && $(MAKE) $(MAKESILENT) -f proto/CMakeFiles/monitor_proto.dir/build.make proto/CMakeFiles/monitor_proto.dir/monitor_info.pb.cc.s
 .PHONY : monitor_info.pb.cc.s
 
+net_info.grpc.pb.o: net_info.grpc.pb.cc.o
+.PHONY : net_info.grpc.pb.o
+
+# target to build an object file
+net_info.grpc.pb.cc.o:
+	cd /work/cmake && $(MAKE) $(MAKESILENT) -f proto/CMakeFiles/monitor_proto.dir/build.make proto/CMakeFiles/monitor_proto.dir/net_info.grpc.pb.cc.o
+.PHONY : net_info.grpc.pb.cc.o
+
+net_info.grpc.pb.i: net_info.grpc.pb.cc.i
+.PHONY : net_info.grpc.pb.i
+
+# target to preprocess a source file
+net_info.grpc.pb.cc.i:
+	cd /work/cmake && $(MAKE) $(MAKESILENT) -f proto/CMakeFiles/monitor_proto.dir/build.make proto/CMakeFiles/monitor_proto.dir/net_info.grpc.pb.cc.i
+.PHONY : net_info.grpc.pb.cc.i
+
+net_info.grpc.pb.s: net_info.grpc.pb.cc.s
+.PHONY : net_info.grpc.pb.s
+
+# target to generate assembly for a file
+net_info.grpc.pb.cc.s:
+	cd /work/cmake && $(MAKE) $(MAKESILENT) -f proto/CMakeFiles/monitor_proto.dir/build.make proto/CMakeFiles/monitor_proto.dir/net_info.grpc.pb.cc.s
+.PHONY : net_info.grpc.pb.cc.s
+
+net_info.pb.o: net_info.pb.cc.o
+.PHONY : net_info.pb.o
+
+# target to build an object file
+net_info.pb.cc.o:
+	cd /work/cmake && $(MAKE) $(MAKESILENT) -f proto/CMakeFiles/monitor_proto.dir/build.make proto/CMakeFiles/monitor_proto.dir/net_info.pb.cc.o
+.PHONY : net_info.pb.cc.o
+
+net_info.pb.i: net_info.pb.cc.i
+.PHONY : net_info.pb.i
+
+# target to preprocess a source file
+net_info.pb.cc.i:
+	cd /work/cmake && $(MAKE) $(MAKESILENT) -f proto/CMakeFiles/monitor_proto.dir/build.make proto/CMakeFiles/monitor_proto.dir/net_info.pb.cc.i
+.PHONY : net_info.pb.cc.i
+
+net_info.pb.s: net_info.pb.cc.s
+.PHONY : net_info.pb.s
+
+# target to generate assembly for a file
+net_info.pb.cc.s:
+	cd /work/cmake && $(MAKE) $(MAKESILENT) -f proto/CMakeFiles/monitor_proto.dir/build.make proto/CMakeFiles/monitor_proto.dir/net_info.pb.cc.s
+.PHONY : net_info.pb.cc.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -187,12 +427,42 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... monitor_proto"
+	@echo "... cpu_load.grpc.pb.o"
+	@echo "... cpu_load.grpc.pb.i"
+	@echo "... cpu_load.grpc.pb.s"
+	@echo "... cpu_load.pb.o"
+	@echo "... cpu_load.pb.i"
+	@echo "... cpu_load.pb.s"
+	@echo "... cpu_softirq.grpc.pb.o"
+	@echo "... cpu_softirq.grpc.pb.i"
+	@echo "... cpu_softirq.grpc.pb.s"
+	@echo "... cpu_softirq.pb.o"
+	@echo "... cpu_softirq.pb.i"
+	@echo "... cpu_softirq.pb.s"
+	@echo "... cpu_stat.grpc.pb.o"
+	@echo "... cpu_stat.grpc.pb.i"
+	@echo "... cpu_stat.grpc.pb.s"
+	@echo "... cpu_stat.pb.o"
+	@echo "... cpu_stat.pb.i"
+	@echo "... cpu_stat.pb.s"
+	@echo "... mem_info.grpc.pb.o"
+	@echo "... mem_info.grpc.pb.i"
+	@echo "... mem_info.grpc.pb.s"
+	@echo "... mem_info.pb.o"
+	@echo "... mem_info.pb.i"
+	@echo "... mem_info.pb.s"
 	@echo "... monitor_info.grpc.pb.o"
 	@echo "... monitor_info.grpc.pb.i"
 	@echo "... monitor_info.grpc.pb.s"
 	@echo "... monitor_info.pb.o"
 	@echo "... monitor_info.pb.i"
 	@echo "... monitor_info.pb.s"
+	@echo "... net_info.grpc.pb.o"
+	@echo "... net_info.grpc.pb.i"
+	@echo "... net_info.grpc.pb.s"
+	@echo "... net_info.pb.o"
+	@echo "... net_info.pb.i"
+	@echo "... net_info.pb.s"
 .PHONY : help
 
 

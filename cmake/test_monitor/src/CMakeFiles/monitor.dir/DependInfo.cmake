@@ -12,6 +12,8 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/work/test_monitor/src/monitor/cpu_load_monitor.cpp" "test_monitor/src/CMakeFiles/monitor.dir/monitor/cpu_load_monitor.cpp.o" "gcc" "test_monitor/src/CMakeFiles/monitor.dir/monitor/cpu_load_monitor.cpp.o.d"
   "/work/test_monitor/src/monitor/cpu_softirq_monitor.cpp" "test_monitor/src/CMakeFiles/monitor.dir/monitor/cpu_softirq_monitor.cpp.o" "gcc" "test_monitor/src/CMakeFiles/monitor.dir/monitor/cpu_softirq_monitor.cpp.o.d"
   "/work/test_monitor/src/monitor/cpu_stat_monitor.cpp" "test_monitor/src/CMakeFiles/monitor.dir/monitor/cpu_stat_monitor.cpp.o" "gcc" "test_monitor/src/CMakeFiles/monitor.dir/monitor/cpu_stat_monitor.cpp.o.d"
+  "/work/test_monitor/src/monitor/mem_monitor.cpp" "test_monitor/src/CMakeFiles/monitor.dir/monitor/mem_monitor.cpp.o" "gcc" "test_monitor/src/CMakeFiles/monitor.dir/monitor/mem_monitor.cpp.o.d"
+  "/work/test_monitor/src/monitor/net_monitor.cpp" "test_monitor/src/CMakeFiles/monitor.dir/monitor/net_monitor.cpp.o" "gcc" "test_monitor/src/CMakeFiles/monitor.dir/monitor/net_monitor.cpp.o.d"
   "/work/test_monitor/src/utils/read_file.cpp" "test_monitor/src/CMakeFiles/monitor.dir/utils/read_file.cpp.o" "gcc" "test_monitor/src/CMakeFiles/monitor.dir/utils/read_file.cpp.o.d"
   )
 

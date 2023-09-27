@@ -424,6 +424,9 @@ display_monitor/CMakeFiles/display.dir/main.cpp.o: \
  /usr/local/include/google/protobuf/message.h \
  /usr/local/include/google/protobuf/extension_set.h \
  /usr/local/include/google/protobuf/empty.pb.h \
+ /work/cmake/proto/net_info.pb.h /work/cmake/proto/mem_info.pb.h \
+ /work/cmake/proto/cpu_stat.pb.h /work/cmake/proto/cpu_softirq.pb.h \
+ /work/cmake/proto/cpu_load.pb.h \
  /usr/local/include/grpcpp/impl/codegen/async_generic_service.h \
  /usr/local/include/grpcpp/impl/codegen/async_stream_impl.h \
  /usr/local/include/grpcpp/impl/codegen/service_type.h \
@@ -1074,5 +1077,6 @@ display_monitor/CMakeFiles/display.dir/main.cpp.o: \
  /usr/local/qt5/include/QtCore/QAbstractTableModel \
  /work/display_monitor/monitor_inter.h \
  /usr/local/qt5/include/QtCore/QObject \
- /work/display_monitor/cpu_stat_model.h \
- /work/display_monitor/monitor_model.h
+ /work/display_monitor/cpu_softirq_model.h \
+ /work/display_monitor/cpu_stat_model.h /work/display_monitor/mem_model.h \
+ /work/display_monitor/net_model.h

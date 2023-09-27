@@ -70,9 +70,21 @@
 			null
 		],
 		[
+			"/work/display_monitor/cpu_softirq_model.h",
+			"Mu",
+			"EWIEGA46WW/moc_cpu_softirq_model.cpp",
+			null
+		],
+		[
 			"/work/display_monitor/cpu_stat_model.h",
 			"Mu",
 			"EWIEGA46WW/moc_cpu_stat_model.cpp",
+			null
+		],
+		[
+			"/work/display_monitor/mem_model.h",
+			"Mu",
+			"EWIEGA46WW/moc_mem_model.cpp",
 			null
 		],
 		[
@@ -82,15 +94,15 @@
 			null
 		],
 		[
-			"/work/display_monitor/monitor_model.h",
-			"Mu",
-			"EWIEGA46WW/moc_monitor_model.cpp",
-			null
-		],
-		[
 			"/work/display_monitor/monitor_widget.h",
 			"Mu",
 			"EWIEGA46WW/moc_monitor_widget.cpp",
+			null
+		],
+		[
+			"/work/display_monitor/net_model.h",
+			"Mu",
+			"EWIEGA46WW/moc_net_model.cpp",
 			null
 		]
 	],
@@ -145,7 +157,7 @@
 	"MOC_RELAXED_MODE" : false,
 	"MOC_SKIP" : [],
 	"MULTI_CONFIG" : false,
-	"PARALLEL" : 8,
+	"PARALLEL" : 4,
 	"PARSE_CACHE_FILE" : "/work/cmake/display_monitor/CMakeFiles/display_autogen.dir/ParseCache.txt",
 	"QT_MOC_EXECUTABLE" : "/usr/local/qt5/bin/moc",
 	"QT_UIC_EXECUTABLE" : "",
@@ -155,11 +167,13 @@
 	"SOURCES" : 
 	[
 		[ "/work/display_monitor/cpu_load_model.cpp", "Mu", null ],
+		[ "/work/display_monitor/cpu_softirq_model.cpp", "Mu", null ],
 		[ "/work/display_monitor/cpu_stat_model.cpp", "Mu", null ],
 		[ "/work/display_monitor/main.cpp", "Mu", null ],
+		[ "/work/display_monitor/mem_model.cpp", "Mu", null ],
 		[ "/work/display_monitor/monitor_inter.cpp", "Mu", null ],
-		[ "/work/display_monitor/monitor_model.cpp", "Mu", null ],
-		[ "/work/display_monitor/monitor_widget.cpp", "Mu", null ]
+		[ "/work/display_monitor/monitor_widget.cpp", "Mu", null ],
+		[ "/work/display_monitor/net_model.cpp", "Mu", null ]
 	],
 	"VERBOSITY" : 0
 }

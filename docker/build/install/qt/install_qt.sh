@@ -2,25 +2,32 @@
 
 set -e
 
+# 没用上
 BUILD_TYPE="${1:-download}"
 
+# 变量没用上
 CURR_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd -P)"
 
+# 没用上
 TARGET_ARCH="$(uname -m)"
 
+#没用上
 QT_VERSION_A=5.12
+
 QT_VERSION_B=5.12.9
+# 5129
 QT_VERSION_Z=$(echo "$QT_VERSION_B" | tr -d '.')
 
 # docker/build/install/qt/qt-opensource-linux-x64-5.12.9.run
 QT_INSTALLER=qt-opensource-linux-x64-5.12.9.run
 # https://download.qt.io/archive/qt/5.12/5.12.9/qt-opensource-linux-x64-5.12.9.run
 
+# /usr/local/Qt5.12.9
 MY_DEST_DIR="/usr/local/Qt${QT_VERSION_B}"
 cuteci --installer /tmp/install/qt/qt-opensource-linux-x64-5.12.9.run \
     install \
     --destdir="$MY_DEST_DIR" \
-    --packages "qt.qt5.${QT_VERSION_Z}.gcc_64" \
+    --packages "qt.qt5.${QT_VERSION_Z}.gcc_64" \    # qt.qt5.5129.gcc_64
     --keep-tools
 
 QT5_PATH="/usr/local/qt5"

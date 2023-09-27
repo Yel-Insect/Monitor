@@ -168,6 +168,30 @@ cpu_load_model.cpp.s:
 	cd /work/cmake && $(MAKE) $(MAKESILENT) -f display_monitor/CMakeFiles/display.dir/build.make display_monitor/CMakeFiles/display.dir/cpu_load_model.cpp.s
 .PHONY : cpu_load_model.cpp.s
 
+cpu_softirq_model.o: cpu_softirq_model.cpp.o
+.PHONY : cpu_softirq_model.o
+
+# target to build an object file
+cpu_softirq_model.cpp.o:
+	cd /work/cmake && $(MAKE) $(MAKESILENT) -f display_monitor/CMakeFiles/display.dir/build.make display_monitor/CMakeFiles/display.dir/cpu_softirq_model.cpp.o
+.PHONY : cpu_softirq_model.cpp.o
+
+cpu_softirq_model.i: cpu_softirq_model.cpp.i
+.PHONY : cpu_softirq_model.i
+
+# target to preprocess a source file
+cpu_softirq_model.cpp.i:
+	cd /work/cmake && $(MAKE) $(MAKESILENT) -f display_monitor/CMakeFiles/display.dir/build.make display_monitor/CMakeFiles/display.dir/cpu_softirq_model.cpp.i
+.PHONY : cpu_softirq_model.cpp.i
+
+cpu_softirq_model.s: cpu_softirq_model.cpp.s
+.PHONY : cpu_softirq_model.s
+
+# target to generate assembly for a file
+cpu_softirq_model.cpp.s:
+	cd /work/cmake && $(MAKE) $(MAKESILENT) -f display_monitor/CMakeFiles/display.dir/build.make display_monitor/CMakeFiles/display.dir/cpu_softirq_model.cpp.s
+.PHONY : cpu_softirq_model.cpp.s
+
 cpu_stat_model.o: cpu_stat_model.cpp.o
 .PHONY : cpu_stat_model.o
 
@@ -240,6 +264,30 @@ main.cpp.s:
 	cd /work/cmake && $(MAKE) $(MAKESILENT) -f display_monitor/CMakeFiles/display.dir/build.make display_monitor/CMakeFiles/display.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+mem_model.o: mem_model.cpp.o
+.PHONY : mem_model.o
+
+# target to build an object file
+mem_model.cpp.o:
+	cd /work/cmake && $(MAKE) $(MAKESILENT) -f display_monitor/CMakeFiles/display.dir/build.make display_monitor/CMakeFiles/display.dir/mem_model.cpp.o
+.PHONY : mem_model.cpp.o
+
+mem_model.i: mem_model.cpp.i
+.PHONY : mem_model.i
+
+# target to preprocess a source file
+mem_model.cpp.i:
+	cd /work/cmake && $(MAKE) $(MAKESILENT) -f display_monitor/CMakeFiles/display.dir/build.make display_monitor/CMakeFiles/display.dir/mem_model.cpp.i
+.PHONY : mem_model.cpp.i
+
+mem_model.s: mem_model.cpp.s
+.PHONY : mem_model.s
+
+# target to generate assembly for a file
+mem_model.cpp.s:
+	cd /work/cmake && $(MAKE) $(MAKESILENT) -f display_monitor/CMakeFiles/display.dir/build.make display_monitor/CMakeFiles/display.dir/mem_model.cpp.s
+.PHONY : mem_model.cpp.s
+
 monitor_inter.o: monitor_inter.cpp.o
 .PHONY : monitor_inter.o
 
@@ -263,30 +311,6 @@ monitor_inter.s: monitor_inter.cpp.s
 monitor_inter.cpp.s:
 	cd /work/cmake && $(MAKE) $(MAKESILENT) -f display_monitor/CMakeFiles/display.dir/build.make display_monitor/CMakeFiles/display.dir/monitor_inter.cpp.s
 .PHONY : monitor_inter.cpp.s
-
-monitor_model.o: monitor_model.cpp.o
-.PHONY : monitor_model.o
-
-# target to build an object file
-monitor_model.cpp.o:
-	cd /work/cmake && $(MAKE) $(MAKESILENT) -f display_monitor/CMakeFiles/display.dir/build.make display_monitor/CMakeFiles/display.dir/monitor_model.cpp.o
-.PHONY : monitor_model.cpp.o
-
-monitor_model.i: monitor_model.cpp.i
-.PHONY : monitor_model.i
-
-# target to preprocess a source file
-monitor_model.cpp.i:
-	cd /work/cmake && $(MAKE) $(MAKESILENT) -f display_monitor/CMakeFiles/display.dir/build.make display_monitor/CMakeFiles/display.dir/monitor_model.cpp.i
-.PHONY : monitor_model.cpp.i
-
-monitor_model.s: monitor_model.cpp.s
-.PHONY : monitor_model.s
-
-# target to generate assembly for a file
-monitor_model.cpp.s:
-	cd /work/cmake && $(MAKE) $(MAKESILENT) -f display_monitor/CMakeFiles/display.dir/build.make display_monitor/CMakeFiles/display.dir/monitor_model.cpp.s
-.PHONY : monitor_model.cpp.s
 
 monitor_widget.o: monitor_widget.cpp.o
 .PHONY : monitor_widget.o
@@ -312,6 +336,30 @@ monitor_widget.cpp.s:
 	cd /work/cmake && $(MAKE) $(MAKESILENT) -f display_monitor/CMakeFiles/display.dir/build.make display_monitor/CMakeFiles/display.dir/monitor_widget.cpp.s
 .PHONY : monitor_widget.cpp.s
 
+net_model.o: net_model.cpp.o
+.PHONY : net_model.o
+
+# target to build an object file
+net_model.cpp.o:
+	cd /work/cmake && $(MAKE) $(MAKESILENT) -f display_monitor/CMakeFiles/display.dir/build.make display_monitor/CMakeFiles/display.dir/net_model.cpp.o
+.PHONY : net_model.cpp.o
+
+net_model.i: net_model.cpp.i
+.PHONY : net_model.i
+
+# target to preprocess a source file
+net_model.cpp.i:
+	cd /work/cmake && $(MAKE) $(MAKESILENT) -f display_monitor/CMakeFiles/display.dir/build.make display_monitor/CMakeFiles/display.dir/net_model.cpp.i
+.PHONY : net_model.cpp.i
+
+net_model.s: net_model.cpp.s
+.PHONY : net_model.s
+
+# target to generate assembly for a file
+net_model.cpp.s:
+	cd /work/cmake && $(MAKE) $(MAKESILENT) -f display_monitor/CMakeFiles/display.dir/build.make display_monitor/CMakeFiles/display.dir/net_model.cpp.s
+.PHONY : net_model.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -325,6 +373,9 @@ help:
 	@echo "... cpu_load_model.o"
 	@echo "... cpu_load_model.i"
 	@echo "... cpu_load_model.s"
+	@echo "... cpu_softirq_model.o"
+	@echo "... cpu_softirq_model.i"
+	@echo "... cpu_softirq_model.s"
 	@echo "... cpu_stat_model.o"
 	@echo "... cpu_stat_model.i"
 	@echo "... cpu_stat_model.s"
@@ -334,15 +385,18 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... mem_model.o"
+	@echo "... mem_model.i"
+	@echo "... mem_model.s"
 	@echo "... monitor_inter.o"
 	@echo "... monitor_inter.i"
 	@echo "... monitor_inter.s"
-	@echo "... monitor_model.o"
-	@echo "... monitor_model.i"
-	@echo "... monitor_model.s"
 	@echo "... monitor_widget.o"
 	@echo "... monitor_widget.i"
 	@echo "... monitor_widget.s"
+	@echo "... net_model.o"
+	@echo "... net_model.i"
+	@echo "... net_model.s"
 .PHONY : help
 
 

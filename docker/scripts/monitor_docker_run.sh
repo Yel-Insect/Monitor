@@ -3,6 +3,7 @@
 MONITOR_HOME_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )/../.." && pwd )"
 
 display=""
+# 如果DISPLAY为空
 if [ -z ${DISPLAY} ];then
     display=":1"
 else

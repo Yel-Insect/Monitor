@@ -307,6 +307,9 @@ display_monitor/CMakeFiles/display.dir/display_autogen/mocs_compilation.cpp.o: \
  /usr/local/include/google/protobuf/message.h \
  /usr/local/include/google/protobuf/extension_set.h \
  /usr/include/c++/7/cassert /usr/local/include/google/protobuf/empty.pb.h \
+ /work/cmake/proto/net_info.pb.h /work/cmake/proto/mem_info.pb.h \
+ /work/cmake/proto/cpu_stat.pb.h /work/cmake/proto/cpu_softirq.pb.h \
+ /work/cmake/proto/cpu_load.pb.h \
  /usr/local/include/grpc/impl/codegen/port_platform.h \
  /usr/include/linux/version.h \
  /usr/local/include/grpcpp/impl/codegen/async_generic_service.h \
@@ -393,11 +396,13 @@ display_monitor/CMakeFiles/display.dir/display_autogen/mocs_compilation.cpp.o: \
  /work/cmake/proto/monitor_info.pb.h \
  /usr/local/qt5/include/QtCore/QVector \
  /usr/local/qt5/include/QtCore/qvector.h \
+ /work/cmake/display_monitor/display_autogen/EWIEGA46WW/moc_cpu_softirq_model.cpp \
+ /work/cmake/display_monitor/display_autogen/EWIEGA46WW/../../../../display_monitor/cpu_softirq_model.h \
  /work/cmake/display_monitor/display_autogen/EWIEGA46WW/moc_cpu_stat_model.cpp \
  /work/cmake/display_monitor/display_autogen/EWIEGA46WW/../../../../display_monitor/cpu_stat_model.h \
+ /work/cmake/display_monitor/display_autogen/EWIEGA46WW/moc_mem_model.cpp \
+ /work/cmake/display_monitor/display_autogen/EWIEGA46WW/../../../../display_monitor/mem_model.h \
  /work/cmake/display_monitor/display_autogen/EWIEGA46WW/moc_monitor_inter.cpp \
- /work/cmake/display_monitor/display_autogen/EWIEGA46WW/moc_monitor_model.cpp \
- /work/cmake/display_monitor/display_autogen/EWIEGA46WW/../../../../display_monitor/monitor_model.h \
  /work/cmake/display_monitor/display_autogen/EWIEGA46WW/moc_monitor_widget.cpp \
  /work/cmake/display_monitor/display_autogen/EWIEGA46WW/../../../../display_monitor/monitor_widget.h \
  /usr/local/qt5/include/QtGui/QStandardItemModel \
@@ -1027,4 +1032,6 @@ display_monitor/CMakeFiles/display.dir/display_autogen/mocs_compilation.cpp.o: \
  /usr/local/qt5/include/QtWidgets/qwhatsthis.h \
  /usr/local/qt5/include/QtWidgets/qwidgetaction.h \
  /usr/local/qt5/include/QtWidgets/qwizard.h \
- /usr/local/qt5/include/QtWidgets/qtwidgetsversion.h
+ /usr/local/qt5/include/QtWidgets/qtwidgetsversion.h \
+ /work/cmake/display_monitor/display_autogen/EWIEGA46WW/../../../../display_monitor/net_model.h \
+ /work/cmake/display_monitor/display_autogen/EWIEGA46WW/moc_net_model.cpp

@@ -226,6 +226,54 @@ monitor/cpu_stat_monitor.cpp.s:
 	cd /work/cmake && $(MAKE) $(MAKESILENT) -f test_monitor/src/CMakeFiles/monitor.dir/build.make test_monitor/src/CMakeFiles/monitor.dir/monitor/cpu_stat_monitor.cpp.s
 .PHONY : monitor/cpu_stat_monitor.cpp.s
 
+monitor/mem_monitor.o: monitor/mem_monitor.cpp.o
+.PHONY : monitor/mem_monitor.o
+
+# target to build an object file
+monitor/mem_monitor.cpp.o:
+	cd /work/cmake && $(MAKE) $(MAKESILENT) -f test_monitor/src/CMakeFiles/monitor.dir/build.make test_monitor/src/CMakeFiles/monitor.dir/monitor/mem_monitor.cpp.o
+.PHONY : monitor/mem_monitor.cpp.o
+
+monitor/mem_monitor.i: monitor/mem_monitor.cpp.i
+.PHONY : monitor/mem_monitor.i
+
+# target to preprocess a source file
+monitor/mem_monitor.cpp.i:
+	cd /work/cmake && $(MAKE) $(MAKESILENT) -f test_monitor/src/CMakeFiles/monitor.dir/build.make test_monitor/src/CMakeFiles/monitor.dir/monitor/mem_monitor.cpp.i
+.PHONY : monitor/mem_monitor.cpp.i
+
+monitor/mem_monitor.s: monitor/mem_monitor.cpp.s
+.PHONY : monitor/mem_monitor.s
+
+# target to generate assembly for a file
+monitor/mem_monitor.cpp.s:
+	cd /work/cmake && $(MAKE) $(MAKESILENT) -f test_monitor/src/CMakeFiles/monitor.dir/build.make test_monitor/src/CMakeFiles/monitor.dir/monitor/mem_monitor.cpp.s
+.PHONY : monitor/mem_monitor.cpp.s
+
+monitor/net_monitor.o: monitor/net_monitor.cpp.o
+.PHONY : monitor/net_monitor.o
+
+# target to build an object file
+monitor/net_monitor.cpp.o:
+	cd /work/cmake && $(MAKE) $(MAKESILENT) -f test_monitor/src/CMakeFiles/monitor.dir/build.make test_monitor/src/CMakeFiles/monitor.dir/monitor/net_monitor.cpp.o
+.PHONY : monitor/net_monitor.cpp.o
+
+monitor/net_monitor.i: monitor/net_monitor.cpp.i
+.PHONY : monitor/net_monitor.i
+
+# target to preprocess a source file
+monitor/net_monitor.cpp.i:
+	cd /work/cmake && $(MAKE) $(MAKESILENT) -f test_monitor/src/CMakeFiles/monitor.dir/build.make test_monitor/src/CMakeFiles/monitor.dir/monitor/net_monitor.cpp.i
+.PHONY : monitor/net_monitor.cpp.i
+
+monitor/net_monitor.s: monitor/net_monitor.cpp.s
+.PHONY : monitor/net_monitor.s
+
+# target to generate assembly for a file
+monitor/net_monitor.cpp.s:
+	cd /work/cmake && $(MAKE) $(MAKESILENT) -f test_monitor/src/CMakeFiles/monitor.dir/build.make test_monitor/src/CMakeFiles/monitor.dir/monitor/net_monitor.cpp.s
+.PHONY : monitor/net_monitor.cpp.s
+
 utils/read_file.o: utils/read_file.cpp.o
 .PHONY : utils/read_file.o
 
@@ -271,6 +319,12 @@ help:
 	@echo "... monitor/cpu_stat_monitor.o"
 	@echo "... monitor/cpu_stat_monitor.i"
 	@echo "... monitor/cpu_stat_monitor.s"
+	@echo "... monitor/mem_monitor.o"
+	@echo "... monitor/mem_monitor.i"
+	@echo "... monitor/mem_monitor.s"
+	@echo "... monitor/net_monitor.o"
+	@echo "... monitor/net_monitor.i"
+	@echo "... monitor/net_monitor.s"
 	@echo "... utils/read_file.o"
 	@echo "... utils/read_file.i"
 	@echo "... utils/read_file.s"

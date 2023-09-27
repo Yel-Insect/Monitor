@@ -125,10 +125,38 @@ test_monitor/src/CMakeFiles/monitor.dir/monitor/cpu_stat_monitor.cpp.s: cmake_fo
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/monitor.dir/monitor/cpu_stat_monitor.cpp.s"
 	cd /work/cmake/test_monitor/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /work/test_monitor/src/monitor/cpu_stat_monitor.cpp -o CMakeFiles/monitor.dir/monitor/cpu_stat_monitor.cpp.s
 
+test_monitor/src/CMakeFiles/monitor.dir/monitor/mem_monitor.cpp.o: test_monitor/src/CMakeFiles/monitor.dir/flags.make
+test_monitor/src/CMakeFiles/monitor.dir/monitor/mem_monitor.cpp.o: /work/test_monitor/src/monitor/mem_monitor.cpp
+test_monitor/src/CMakeFiles/monitor.dir/monitor/mem_monitor.cpp.o: test_monitor/src/CMakeFiles/monitor.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/work/cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object test_monitor/src/CMakeFiles/monitor.dir/monitor/mem_monitor.cpp.o"
+	cd /work/cmake/test_monitor/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT test_monitor/src/CMakeFiles/monitor.dir/monitor/mem_monitor.cpp.o -MF CMakeFiles/monitor.dir/monitor/mem_monitor.cpp.o.d -o CMakeFiles/monitor.dir/monitor/mem_monitor.cpp.o -c /work/test_monitor/src/monitor/mem_monitor.cpp
+
+test_monitor/src/CMakeFiles/monitor.dir/monitor/mem_monitor.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/monitor.dir/monitor/mem_monitor.cpp.i"
+	cd /work/cmake/test_monitor/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /work/test_monitor/src/monitor/mem_monitor.cpp > CMakeFiles/monitor.dir/monitor/mem_monitor.cpp.i
+
+test_monitor/src/CMakeFiles/monitor.dir/monitor/mem_monitor.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/monitor.dir/monitor/mem_monitor.cpp.s"
+	cd /work/cmake/test_monitor/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /work/test_monitor/src/monitor/mem_monitor.cpp -o CMakeFiles/monitor.dir/monitor/mem_monitor.cpp.s
+
+test_monitor/src/CMakeFiles/monitor.dir/monitor/net_monitor.cpp.o: test_monitor/src/CMakeFiles/monitor.dir/flags.make
+test_monitor/src/CMakeFiles/monitor.dir/monitor/net_monitor.cpp.o: /work/test_monitor/src/monitor/net_monitor.cpp
+test_monitor/src/CMakeFiles/monitor.dir/monitor/net_monitor.cpp.o: test_monitor/src/CMakeFiles/monitor.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/work/cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object test_monitor/src/CMakeFiles/monitor.dir/monitor/net_monitor.cpp.o"
+	cd /work/cmake/test_monitor/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT test_monitor/src/CMakeFiles/monitor.dir/monitor/net_monitor.cpp.o -MF CMakeFiles/monitor.dir/monitor/net_monitor.cpp.o.d -o CMakeFiles/monitor.dir/monitor/net_monitor.cpp.o -c /work/test_monitor/src/monitor/net_monitor.cpp
+
+test_monitor/src/CMakeFiles/monitor.dir/monitor/net_monitor.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/monitor.dir/monitor/net_monitor.cpp.i"
+	cd /work/cmake/test_monitor/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /work/test_monitor/src/monitor/net_monitor.cpp > CMakeFiles/monitor.dir/monitor/net_monitor.cpp.i
+
+test_monitor/src/CMakeFiles/monitor.dir/monitor/net_monitor.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/monitor.dir/monitor/net_monitor.cpp.s"
+	cd /work/cmake/test_monitor/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /work/test_monitor/src/monitor/net_monitor.cpp -o CMakeFiles/monitor.dir/monitor/net_monitor.cpp.s
+
 test_monitor/src/CMakeFiles/monitor.dir/utils/read_file.cpp.o: test_monitor/src/CMakeFiles/monitor.dir/flags.make
 test_monitor/src/CMakeFiles/monitor.dir/utils/read_file.cpp.o: /work/test_monitor/src/utils/read_file.cpp
 test_monitor/src/CMakeFiles/monitor.dir/utils/read_file.cpp.o: test_monitor/src/CMakeFiles/monitor.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/work/cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object test_monitor/src/CMakeFiles/monitor.dir/utils/read_file.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/work/cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object test_monitor/src/CMakeFiles/monitor.dir/utils/read_file.cpp.o"
 	cd /work/cmake/test_monitor/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT test_monitor/src/CMakeFiles/monitor.dir/utils/read_file.cpp.o -MF CMakeFiles/monitor.dir/utils/read_file.cpp.o.d -o CMakeFiles/monitor.dir/utils/read_file.cpp.o -c /work/test_monitor/src/utils/read_file.cpp
 
 test_monitor/src/CMakeFiles/monitor.dir/utils/read_file.cpp.i: cmake_force
@@ -145,6 +173,8 @@ monitor_OBJECTS = \
 "CMakeFiles/monitor.dir/monitor/cpu_softirq_monitor.cpp.o" \
 "CMakeFiles/monitor.dir/monitor/cpu_load_monitor.cpp.o" \
 "CMakeFiles/monitor.dir/monitor/cpu_stat_monitor.cpp.o" \
+"CMakeFiles/monitor.dir/monitor/mem_monitor.cpp.o" \
+"CMakeFiles/monitor.dir/monitor/net_monitor.cpp.o" \
 "CMakeFiles/monitor.dir/utils/read_file.cpp.o"
 
 # External object files for target monitor
@@ -154,6 +184,8 @@ test_monitor/src/monitor: test_monitor/src/CMakeFiles/monitor.dir/main.cpp.o
 test_monitor/src/monitor: test_monitor/src/CMakeFiles/monitor.dir/monitor/cpu_softirq_monitor.cpp.o
 test_monitor/src/monitor: test_monitor/src/CMakeFiles/monitor.dir/monitor/cpu_load_monitor.cpp.o
 test_monitor/src/monitor: test_monitor/src/CMakeFiles/monitor.dir/monitor/cpu_stat_monitor.cpp.o
+test_monitor/src/monitor: test_monitor/src/CMakeFiles/monitor.dir/monitor/mem_monitor.cpp.o
+test_monitor/src/monitor: test_monitor/src/CMakeFiles/monitor.dir/monitor/net_monitor.cpp.o
 test_monitor/src/monitor: test_monitor/src/CMakeFiles/monitor.dir/utils/read_file.cpp.o
 test_monitor/src/monitor: test_monitor/src/CMakeFiles/monitor.dir/build.make
 test_monitor/src/monitor: proto/libmonitor_proto.a
@@ -184,7 +216,7 @@ test_monitor/src/monitor: /usr/local/lib/libabsl_throw_delegate.so
 test_monitor/src/monitor: /usr/local/lib/libabsl_raw_logging_internal.so
 test_monitor/src/monitor: /usr/local/lib/libabsl_log_severity.so
 test_monitor/src/monitor: test_monitor/src/CMakeFiles/monitor.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/work/cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable monitor"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/work/cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable monitor"
 	cd /work/cmake/test_monitor/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/monitor.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
